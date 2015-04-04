@@ -4,8 +4,8 @@
 #    OpenERP, Open Source Management Solution
 #    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
 #
-#    Thinkopen Brasil
-#    Copyright (C) Thinkopen Solutions Brasil (<http://www.tkobr.com>).
+#    ThinkOpen Solutions Brasil
+#    Copyright (C) Thinkopen Solutions <http://www.tkobr.com>.
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -77,6 +77,7 @@ class Session_tkobr(openerp.addons.web.controllers.main.Session):
             request.uid = openerp.SUPERUSER_ID
         res_user = request.registry.get('res.users').browse(request.cr, request.uid,
             request.session.uid, context=request.context)
+        # Update session
 #         if res_user:
 #             res_user.write(request.cr, request.uid,
 #             {'logged_in': False, 'expiration_date': None, 'session_id': None}, context=request.context)
