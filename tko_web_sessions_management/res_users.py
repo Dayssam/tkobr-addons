@@ -35,8 +35,11 @@ class res_users(osv.osv):
     _inherit = 'res.users'
     
     _columns = {
-        'login_calendar_id': fields.many2one('resource.calendar', 'Allowed Login', company_dependent=True),
-        'no_multiple_sessions': fields.boolean('No Multiple Sessions', company_dependent=True),
+        'login_calendar_id': fields.many2one('resource.calendar',
+             'Allowed Login Calendar', company_dependent=True,
+             help='The user will be only allowed to login in the calendar defined here.'),
+        'no_multiple_sessions': fields.boolean('No Multiple Sessions', company_dependent=True,
+            help='Select this to prevent user to start a session more than once'),
         'interval_number': fields.integer('Default Session Duration', company_dependent=True),
         'interval_type': fields.selection([('minutes', 'Minutes'),
             ('hours', 'Hours'), ('work_days', 'Work Days'),
@@ -45,15 +48,15 @@ class res_users(osv.osv):
         'session_ids': fields.one2many('ir.sessions', 'user_id', 'User Sessions')
         }
     
-    # clears session_id and session expiry from res.users
-    def clear_session(self, cr, uid):
-        if isinstance(uid, list): user_id = uid[0]
-        self._logout(cr, uid)
-        self.write(cr, SUPERUSER_ID, uid, {'logged_in': False})
-    
-    def _logout(self, cr, uid):
-        if isinstance(user_id, list): user_id = uid[0]
-        session_id = request.httprequest.session
-        session_id.logout(self)
+#     # clears session_id and session expiry from res.users
+#     def clear_session(self, cr, uid):
+#         if isinstance(uid, list): user_id = uid[0]
+#         self._logout(cr, uid)
+#         self.write(cr, SUPERUSER_ID, uid, {'logged_in': False})
+#     
+#     def _logout(self, cr, uid):
+#         if isinstance(user_id, list): user_id = uid[0]
+#         session_id = request.httprequest.session
+#         session_id.logout(self)
         
         

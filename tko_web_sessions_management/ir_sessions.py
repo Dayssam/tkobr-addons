@@ -44,23 +44,26 @@ class ir_sessions(osv.osv):
     _columns = { 
         'user_id' : fields.many2one('res.users', 'User', ondelete='cascade',
             required=True),
+        'logged_in': fields.boolean('Logged in', required=True, index=True),
         'session_id' : fields.char('Session ID', size=100, required=True),
+        'date_login': fields.datetime('Login', required=True),
         'expiration_date' : fields.datetime('Expiration Date', required=True,
             index=True),
-        'logged_in': fields.boolean('Logged in', required=True, index=True),
-        'date_login': fields.datetime('Login', required=True),
         'date_logout': fields.datetime('Logout'),
         'logout_type': fields.selection(LOGOUT_TYPES, 'Logout Type'),
         }
 
     # scheduler function to validate users session
-    def validate_sessions(self, cr, uid):
-#         ids = self.search(cr, SUPERUSER_ID,
-#             [('expiration_date', '<=', datetime.strftime(fields.datetime.context_timestamp(cr, SUPERUSER_ID,
-#                     datetime.strptime(fields.datetime.now(),
-#                     DEFAULT_SERVER_DATETIME_FORMAT)), DEFAULT_SERVER_DATETIME_FORMAT)),
-#             ('logged_in', '=', True)])
-#         session_ids = self.browse(cr, SUPERUSER_ID, ids)
-#         for session in session_ids:
-#             self.user_id.clear_session(cr, session.user_id.id)
+    def validate_sessions(self, cr, uid, context=None):
+        ids = self.search(cr, SUPERUSER_ID,
+            [('expiration_date', '<=', fields.datetime.now()),
+             ('logged_in', '=', True)])
+        if ids:
+            session_ids = self.browse(cr, SUPERUSER_ID, ids)
+            for session in session_ids:
+                session_ids = self.browse(cr, SUPERUSER_ID, ids)
+                self.write(cr, uid, session.id,
+                   {'logged_in': False,
+                    'date_logout': fields.datetime.now(),
+                    'logout_type': 'to'}, context=context)
         return True

@@ -30,8 +30,11 @@ class res_groups(osv.osv):
     _inherit = 'res.groups'
     
     _columns = {
-        'login_calendar_id': fields.many2one('resource.calendar', 'Allowed Login Schedule', company_dependent=True),
-        'no_multiple_sessions': fields.boolean('No Multiple Sessions', company_dependent=True),
+        'login_calendar_id': fields.many2one('resource.calendar',
+             'Allow Login Calendar', company_dependent=True,
+             help='The user will be only allowed to login in the calendar defined here.'),
+        'no_multiple_sessions': fields.boolean('No Multiple Sessions', company_dependent=True,
+            help='Select this to prevent user to start a session more than once'),
         'interval_number': fields.integer('Default Session Duration', company_dependent=True),
         'interval_type': fields.selection([('minutes', 'Minutes'),
             ('hours', 'Hours'), ('work_days', 'Work Days'),

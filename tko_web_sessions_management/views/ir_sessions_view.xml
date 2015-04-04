@@ -45,6 +45,17 @@
                     <field name="expiration_date"/>
                     <field name="date_logout"/>
                     <field name="logout_type"/>
+                    <group expand="0" string="Filter by Login State">
+                        <filter string="Logged" domain="[('logged','=',True)]" help="Logged"/>
+                        <filter string="Not Logged" domain="[('logged','=',False)]" help="Not Logged"/>
+                    </group>
+                    <group expand="0" string="Group By">
+                       <filter string="User" domain="[]" context="{'group_by' : 'user_id'}" />
+                       <filter string="Logget In" domain="[]" context="{'group_by' : 'logged_in'}" />
+                       <filter string="Logout Type" domain="[]" context="{'group_by' : 'logout_type'}" />
+                       <filter string="Login Date" domain="[]" context="{'group_by' : 'date_login'}" />
+                       <filter string="Logout Date" domain="[]" context="{'group_by' : 'date_logout'}" />
+                    </group>
                 </search>
             </field>
         </record>

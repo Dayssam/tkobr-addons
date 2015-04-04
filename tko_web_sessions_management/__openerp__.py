@@ -56,6 +56,7 @@ NOTE: Admin has no restrictions""",
                 'web',
                 ],
     'data': [
+        'security/ir.model.access.csv',
         'views/scheduler.xml',
         'views/res_users_view.xml',
         'views/res_groups_view.xml',

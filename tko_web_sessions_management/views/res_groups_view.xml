@@ -7,21 +7,19 @@
             <field name="model">res.groups</field>
             <field name="inherit_id" ref="base.view_groups_form" />
             <field name="arch" type="xml">
-                <xpath expr="//page[@string='Rules']"
+                <xpath expr="//group"
                     position="after">
-                    <page string="Sessions">
-                        <group col="6">
-                            <group string="Session Timeout">
-                                <field name="interval_number" />
-                                <field name="interval_type" />
-                                <newline />
-                                <field name="no_multiple_sessions" />
-                            </group>
-                            <group string="Login Calendar">
-                                <field name="login_calendar_id" />
-                            </group>
+                    <group col="6">
+                        <group string="Session Timeout">
+                            <field name="interval_number" />
+                            <field name="interval_type" />
+                            <newline />
+                            <field name="no_multiple_sessions" />
                         </group>
-                    </page>
+                        <group string="Login Calendar">
+                            <field name="login_calendar_id" />
+                        </group>
+                    </group>
                 </xpath>
             </field>
         </record>

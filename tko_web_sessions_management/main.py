@@ -78,14 +78,16 @@ class Home_tkobr(openerp.addons.web.controllers.main.Home):
         user_obj = request.registry.get('res.users')
         session_obj = request.registry.get('ir.sessions')
         user_id = user_obj.browse(cr, SUPERUSER_ID, uid, context=context)
-        g_exp_date = fields.datetime.context_timestamp(cr, SUPERUSER_ID, 
-                datetime.strptime(fields.datetime.now(),
-                DEFAULT_SERVER_DATETIME_FORMAT)) + _intervalTypes['months'](3)
+        g_exp_date = datetime.now() + _intervalTypes['months'](3)
+#         fields.datetime.context_timestamp(cr, SUPERUSER_ID, 
+#                 datetime.strptime(fields.datetime.now(),
+#                 DEFAULT_SERVER_DATETIME_FORMAT)) + _intervalTypes['months'](3)
         if uid != SUPERUSER_ID or 1:
             if user_id.interval_type:
-                u_exp_date = fields.datetime.context_timestamp(cr, SUPERUSER_ID,
-                    datetime.strptime(fields.datetime.now(),
-                    DEFAULT_SERVER_DATETIME_FORMAT)) + _intervalTypes[user_id.interval_type](user_id.interval_number)
+                u_exp_date = datetime.now() + _intervalTypes[user_id.interval_type](user_id.interval_number)
+#                 fields.datetime.context_timestamp(cr, SUPERUSER_ID,
+#                     datetime.strptime(fields.datetime.now(),
+#                     DEFAULT_SERVER_DATETIME_FORMAT)) + _intervalTypes[user_id.interval_type](user_id.interval_number)
             else:
                 u_exp_date = g_exp_date
             g_no_multiple_sessions = False
@@ -94,10 +96,11 @@ class Home_tkobr(openerp.addons.web.controllers.main.Home):
                 if group.no_multiple_sessions:
                     g_no_multiple_sessions = True
                 if group.interval_type:
-                    t_exp_date = fields.datetime.context_timestamp(cr, SUPERUSER_ID,
-                        datetime.strptime(fields.datetime.now(),
-                        DEFAULT_SERVER_DATETIME_FORMAT)) + _intervalTypes[group.interval_type](group.interval_number)
-                    if t_exp_date < g_exp_roup:
+                    t_exp_date = datetime.now() + _intervalTypes[group.interval_type](group.interval_number)
+#                     fields.datetime.context_timestamp(cr, SUPERUSER_ID,
+#                         datetime.strptime(fields.datetime.now(),
+#                         DEFAULT_SERVER_DATETIME_FORMAT)) + _intervalTypes[group.interval_type](group.interval_number)
+                    if t_exp_date < g_exp_date:
                         g_exp_date = t_exp_date
             if g_no_multiple_sessions:
                 u_no_multiple_sessions = True
@@ -109,7 +112,7 @@ class Home_tkobr(openerp.addons.web.controllers.main.Home):
         return session_obj.create(cr, SUPERUSER_ID, {'user_id': uid,
             'session_id': sid,
             'expiration_date': datetime.strftime(u_exp_date, DEFAULT_SERVER_DATETIME_FORMAT),
-            'date_login': datetime.strftime(fields.datetime.context_timestamp(cr, SUPERUSER_ID, datetime.strptime(fields.datetime.now(), DEFAULT_SERVER_DATETIME_FORMAT)), DEFAULT_SERVER_DATETIME_FORMAT),
+            'date_login': fields.datetime.now(),
             'logged_in': True},
             context=context)
 
