@@ -22,68 +22,64 @@
 #
 ##############################################################################
 
-import logging
 import openerp
 from openerp.osv import fields, osv, orm
 from datetime import date, datetime, time, timedelta
 from openerp import SUPERUSER_ID
 from openerp.http import request
-from openerp.tools.translate import _
+from openerp.addons.base.ir.ir_cron import _intervalTypes
+from openerp.tools import DEFAULT_SERVER_DATETIME_FORMAT
 
-_logger = logging.getLogger(__name__)
 
 class res_users(osv.osv):
     _inherit = 'res.users'
     
-    _columns = { 
-        'session_id' : fields.char('Session ID', size=100),
-        'expiration_date' : fields.datetime('Expiration Date'),
-        'logged_in': fields.boolean('Logged in'),
-        'multiple_sessions': fields.boolean('Multiple Sessions'),
+    _columns = {
+        'login_calendar_id': fields.many2one('resource.calendar', 'Allowed Login', company_dependent=True),
+        'no_multiple_sessions': fields.boolean('No Multiple Sessions', company_dependent=True),
+        'interval_number': fields.integer('Default Session Duration', company_dependent=True),
+        'interval_type': fields.selection([('minutes', 'Minutes'),
+            ('hours', 'Hours'), ('work_days', 'Work Days'),
+            ('days', 'Days'), ('weeks', 'Weeks'), ('months', 'Months')],
+            'Interval Unit', company_dependent=True),
+        'session_ids': fields.one2many('ir.sessions', 'user_id', 'User Sessions')
         }
     
-    def _login(self, db, login, password):
-        cr = self.pool.cursor()
-        cr.autocommit(True)
-        user_id = super(res_users, self)._login(db, login, password)
-        
-        try:
-            session_id = request.httprequest.session.sid
-            temp_browse = self.browse(cr, SUPERUSER_ID, user_id)
-            if isinstance(temp_browse, list): temp_browse = temp_browse[0]
-            exp_date = temp_browse.expiration_date
-            if exp_date and temp_browse.session_id:
-                exp_date = datetime.strptime(exp_date, "%Y-%m-%d %H:%M:%S")
-                if exp_date < datetime.utcnow() or temp_browse.session_id != session_id:
-                    raise openerp.exceptions.AccessDenied()
-            self.save_session(cr, user_id)
-        except openerp.exceptions.AccessDenied:
-            user_id = False
-            _logger.warn("User %s is already logged in into the system!", login)
-            _logger.warn("Multiple sessions are not allowed for security reasons!")
-        finally:
-            cr.close()
+#    def _login(self, db, login, password):
+#        uid = super(res_users, self)._login(db, login, password)
+#        if not uid:
+#            return uid
+#        else:
+#            try:
+#                session_id = request.httprequest.session.sid
+#                sessions_obj = self.pool.get('ir.sessions')
+#                user_obj = self.pool.get('res.users')
+#                session_ids = sessions_obj.search(request.cr, SUPERUSER_ID,
+#                    [('user_id', '=', uid),
+#                     ('logged_in', '=', True),
+#                     ('expiration_date', '>', fields.datetime.now())],
+#                    context=request.context)
+#                user_id = user_obj.browse(request.cr, SUPERUSER_ID, uid,
+#                    context=request.context)
+#                if session_ids and user_id.no_multiple_sessions:
+#                    raise openerp.exceptions.AccessDenied()
+#                else:
+#                    self.save_session(request.cr, uid, request.context)
+#            except openerp.exceptions.AccessDenied:
+#                uid = False
+#                _logger.warn("Multiple sessions are not allowed for security reasons.")
+#                _logger.warn("User login calendar doesn't allow for security reasons")
+#        return uid
     
-        return user_id
-
     # clears session_id and session expiry from res.users
-    def clear_session(self, cr, user_id):
-        if isinstance(user_id, list): user_id = user_id[0]
-        self.write(cr, SUPERUSER_ID, user_id, {'session_id':'', 'expiration_date':False, 'logged_in':False})
-
-    # insert session_id and session expiry into res.users
-    def save_session(self, cr, user_id):
-        if isinstance(user_id, list): user_id = user_id[0]
-        exp_date = datetime.utcnow() + timedelta(minutes=2)
-        sid = request.httprequest.session.sid
-        self.write(cr, SUPERUSER_ID, user_id, {'session_id':sid, 'expiration_date':exp_date, 'logged_in':True})
-
-    # schedular function to validate users session
-    def validate_sessions(self, cr, uid):
-        ids = self.search(cr, SUPERUSER_ID, [('expiration_date', '!=', False)])
-        users = self.browse(cr, SUPERUSER_ID, ids)
+    def clear_session(self, cr, uid):
+        if isinstance(uid, list): user_id = uid[0]
+        self._logout(cr, uid)
+        self.write(cr, SUPERUSER_ID, uid, {'logged_in': False})
+    
+    def _logout(self, cr, uid):
+        if isinstance(user_id, list): user_id = uid[0]
+        session_id = request.httprequest.session
+        session_id.logout(self)
         
-        for user_id in users:
-            exp_date = datetime.strptime(user_id.expiration_date, "%Y-%m-%d %H:%M:%S")
-            if exp_date < datetime.utcnow():
-                self.clear_session(cr, user_id.id)
+        

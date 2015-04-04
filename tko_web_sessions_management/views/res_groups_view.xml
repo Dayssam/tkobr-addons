@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_groups_form" model="ir.ui.view">
+            <field name="name">res.groups.form</field>
+            <field name="model">res.groups</field>
+            <field name="inherit_id" ref="base.view_groups_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//page[@string='Rules']"
+                    position="after">
+                    <page string="Sessions">
+                        <group col="6">
+                            <group string="Session Timeout">
+                                <field name="interval_number" />
+                                <field name="interval_type" />
+                                <newline />
+                                <field name="no_multiple_sessions" />
+                            </group>
+                            <group string="Login Calendar">
+                                <field name="login_calendar_id" />
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

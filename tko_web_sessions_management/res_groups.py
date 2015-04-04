@@ -22,8 +22,19 @@
 #
 ##############################################################################
 
-import http
-import ir_sessions
-import main
-import res_users
-import res_groups
+import openerp
+from openerp.osv import fields, osv, orm
+
+
+class res_groups(osv.osv):
+    _inherit = 'res.groups'
+    
+    _columns = {
+        'login_calendar_id': fields.many2one('resource.calendar', 'Allowed Login Schedule', company_dependent=True),
+        'no_multiple_sessions': fields.boolean('No Multiple Sessions', company_dependent=True),
+        'interval_number': fields.integer('Default Session Duration', company_dependent=True),
+        'interval_type': fields.selection([('minutes', 'Minutes'),
+            ('hours', 'Hours'), ('work_days', 'Work Days'),
+            ('days', 'Days'), ('weeks', 'Weeks'), ('months', 'Months')],
+            'Interval Unit', company_dependent=True),
+        }

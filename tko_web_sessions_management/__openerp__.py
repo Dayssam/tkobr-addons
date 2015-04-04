@@ -46,15 +46,20 @@ One can do following:\n
 # User Session Management:\n
 1. Users can see their own log of sessions;\n
 2. Users can close related active session;\n
-3. Users can choose to close all sessions except current one.""",
+3. Users can choose to close all sessions except current one.\n
+NOTE: Admin has no restrictions""",
     'author': 'ThinkOpen Solutions Brasil',
     'website': 'http://www.tkobr.com',
     'depends': [
                 'base',
+                'resource',
                 'web',
                 ],
     'data': [
-        'scheduler.xml',
+        'views/scheduler.xml',
+        'views/res_users_view.xml',
+        'views/res_groups_view.xml',
+        'views/ir_sessions_view.xml',
         ],
     'init': [],
     'demo': [],

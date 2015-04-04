@@ -31,12 +31,13 @@ from openerp.http import request
 from openerp.tools.translate import _
 from openerp.http import Response
 from openerp import http
-
+from openerp.tools.func import lazy_property
+  
 _logger = logging.getLogger(__name__)
 
 
 class Root_tkobr(openerp.http.Root):
-    
+      
     def get_response(self, httprequest, result, explicit_session):
         if isinstance(result, Response) and result.is_qweb:
             try:
@@ -46,12 +47,12 @@ class Root_tkobr(openerp.http.Root):
                     result = request.registry['ir.http']._handle_exception(e)
                 else:
                     raise
-        
+          
         if isinstance(result, basestring):
             response = Response(result, mimetype='text/html')
         else:
             response = result
-        
+          
         if httprequest.session.should_save:
             self.session_store.save(httprequest.session)
         # We must not set the cookie if the session id was specified using a http header or a GET parameter.
@@ -61,10 +62,10 @@ class Root_tkobr(openerp.http.Root):
         #   (the one using the cookie). That is a special feature of the Session Javascript class.
         # - It could allow session fixation attacks.
         if not explicit_session and hasattr(response, 'set_cookie'):
-            response.set_cookie('session_id', httprequest.session.sid, max_age=2 * 60)
-        
+            response.set_cookie('session_id', httprequest.session.sid, max_age=90 * 24 * 60 * 60)
+          
         return response
-    
+      
 root = Root_tkobr()
 openerp.http.Root.get_response = root.get_response
 

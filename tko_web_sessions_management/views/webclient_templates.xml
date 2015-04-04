@@ -9,8 +9,6 @@
                     <t t-esc="reason1" />
                     <br />
                     <t t-esc="reason2" />
-                    <br />
-                    <t t-esc="reason3" />
                 </p>
             </xpath>
         </template>
