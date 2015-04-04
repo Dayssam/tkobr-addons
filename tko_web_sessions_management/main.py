@@ -114,17 +114,3 @@ class Home_tkobr(openerp.addons.web.controllers.main.Home):
             context=context)
 
 
-class Session_tkobr(openerp.addons.web.controllers.main.Session):
-        
-    @http.route('/web/session/logout', type='http', auth="none")
-    def logout(self, redirect='/web'):
-        if not request.uid:
-            request.uid = openerp.SUPERUSER_ID
-        # Update session
-#         if res_user:
-#             res_user.write(request.cr, request.uid,
-#             {'logged_in': False, 'expiration_date': None, 'session_id': None}, context=request.context)
-#         request.session.logout(keep_db=True)
-#         return werkzeug.utils.redirect(redirect, 303)
-        return super(Session_tkobr, self).logout(redirect)
-

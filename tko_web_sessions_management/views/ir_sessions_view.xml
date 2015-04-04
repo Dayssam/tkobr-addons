@@ -68,7 +68,7 @@
         </record>
 
         <menuitem id="ir_session_menu" action="ir_session_action"
-            parent="base.menu_security" groups="base.group_erp_manager" />
+            parent="base.menu_security" />
 
     </data>
 </openerp>

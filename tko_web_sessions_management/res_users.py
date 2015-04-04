@@ -45,32 +45,6 @@ class res_users(osv.osv):
         'session_ids': fields.one2many('ir.sessions', 'user_id', 'User Sessions')
         }
     
-#    def _login(self, db, login, password):
-#        uid = super(res_users, self)._login(db, login, password)
-#        if not uid:
-#            return uid
-#        else:
-#            try:
-#                session_id = request.httprequest.session.sid
-#                sessions_obj = self.pool.get('ir.sessions')
-#                user_obj = self.pool.get('res.users')
-#                session_ids = sessions_obj.search(request.cr, SUPERUSER_ID,
-#                    [('user_id', '=', uid),
-#                     ('logged_in', '=', True),
-#                     ('expiration_date', '>', fields.datetime.now())],
-#                    context=request.context)
-#                user_id = user_obj.browse(request.cr, SUPERUSER_ID, uid,
-#                    context=request.context)
-#                if session_ids and user_id.no_multiple_sessions:
-#                    raise openerp.exceptions.AccessDenied()
-#                else:
-#                    self.save_session(request.cr, uid, request.context)
-#            except openerp.exceptions.AccessDenied:
-#                uid = False
-#                _logger.warn("Multiple sessions are not allowed for security reasons.")
-#                _logger.warn("User login calendar doesn't allow for security reasons")
-#        return uid
-    
     # clears session_id and session expiry from res.users
     def clear_session(self, cr, uid):
         if isinstance(uid, list): user_id = uid[0]
