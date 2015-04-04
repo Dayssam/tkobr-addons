@@ -35,58 +35,6 @@ from openerp import http
 _logger = logging.getLogger(__name__)
 
 
-class Home_tkobr(openerp.addons.web.controllers.main.Home):
-    
-    @http.route('/web/login', type='http', auth="none")
-    def web_login(self, redirect=None, **kw):
-        openerp.addons.web.controllers.main.ensure_db()
-        
-        if request.httprequest.method == 'GET' and redirect and request.session.uid:
-            return http.redirect_with_hash(redirect)
-        
-        if not request.uid:
-            request.uid = openerp.SUPERUSER_ID
-        
-        values = request.params.copy()
-        if not redirect:
-            redirect = '/web?' + request.httprequest.query_string
-        values['redirect'] = redirect
-        
-        try:
-            values['databases'] = http.db_list()
-        except openerp.exceptions.AccessDenied:
-            values['databases'] = None
-        
-        if request.httprequest.method == 'POST':
-            old_uid = request.uid
-            uid = request.session.authenticate(request.session.db,
-                request.params['login'], request.params['password'])
-            if uid is not False:
-                return http.redirect_with_hash(redirect)
-            request.uid = old_uid
-            values['error'] = 'Login failed due to one of the following reasons'
-            values['reason1'] = '- Wrong login/password'
-            values['reason2'] = '- User not allowed to have multiple logins'
-            values['reason3'] = '- User not allowed to login at this specific time or day'
-        return request.render('web.login', values)
-
-
-class Session_tkobr(openerp.addons.web.controllers.main.Session):
-    
-    @http.route('/web/session/logout', type='http', auth="none")
-    def logout(self, redirect='/web'):
-        if not request.uid:
-            request.uid = openerp.SUPERUSER_ID
-        res_user = request.registry.get('res.users').browse(request.cr, request.uid,
-            request.session.uid, context=request.context)
-#         if res_user:
-#             res_user.write(request.cr, request.uid,
-#             {'logged_in': False, 'expiration_date': None, 'session_id': None}, context=request.context)
-#         request.session.logout(keep_db=True)
-#         return werkzeug.utils.redirect(redirect, 303)
-        return super(Session_tkobr, self).logout(redirect)
-
-
 class Root_tkobr(openerp.http.Root):
     
     def get_response(self, httprequest, result, explicit_session):
