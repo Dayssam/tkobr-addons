@@ -54,7 +54,7 @@ class res_users(osv.osv):
         user_obj = request.registry.get('res.users')
         user_id = user_obj.browse(cr, SUPERUSER_ID, id, context=context)
         g_exp_date = now + _intervalTypes['weeks'](1)
-        if id != SUPERUSER_ID or 1:
+        if id != SUPERUSER_ID:
             if user_id.interval_type:
                 u_exp_date = now + _intervalTypes[user_id.interval_type](user_id.interval_number)
             else:
