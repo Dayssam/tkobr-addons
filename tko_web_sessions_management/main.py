@@ -66,7 +66,7 @@ class Home_tkobr(openerp.addons.web.controllers.main.Home):
                 self.save_session(request.cr, uid, request.context)
                 return http.redirect_with_hash(redirect)
             request.uid = old_uid
-            values['error'] = 'Login failed due to one of the following reasons'
+            values['error'] = 'Login failed due to one of the following reasons:'
             values['reason1'] = '- Wrong login/password'
             values['reason2'] = '- User not allowed to have multiple logins'
             values['reason3'] = '- User not allowed to login at this specific time or day'
