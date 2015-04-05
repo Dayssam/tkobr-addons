@@ -48,15 +48,33 @@ class res_users(osv.osv):
         'session_ids': fields.one2many('ir.sessions', 'user_id', 'User Sessions')
         }
     
-#     # clears session_id and session expiry from res.users
-#     def clear_session(self, cr, uid):
-#         if isinstance(uid, list): user_id = uid[0]
-#         self._logout(cr, uid)
-#         self.write(cr, SUPERUSER_ID, uid, {'logged_in': False})
-#     
-#     def _logout(self, cr, uid):
-#         if isinstance(user_id, list): user_id = uid[0]
-#         session_id = request.httprequest.session
-#         session_id.logout(self)
+    # get earlier expiring date
+    def get_expiring_date(self, cr, uid, id, context):
+        now = datetime.now()
+        user_obj = request.registry.get('res.users')
+        user_id = user_obj.browse(cr, SUPERUSER_ID, id, context=context)
+        g_exp_date = now + _intervalTypes['weeks'](1)
+        if id != SUPERUSER_ID or 1:
+            if user_id.interval_type:
+                u_exp_date = now + _intervalTypes[user_id.interval_type](user_id.interval_number)
+            else:
+                u_exp_date = g_exp_date
+            g_no_multiple_sessions = False
+            u_no_multiple_sessions = user_id.no_multiple_sessions
+            for group in user_id.groups_id:
+                if group.no_multiple_sessions:
+                    g_no_multiple_sessions = True
+                if group.interval_type:
+                    t_exp_date = now + _intervalTypes[group.interval_type](group.interval_number)
+                    if t_exp_date < g_exp_date:
+                        g_exp_date = t_exp_date
+            if g_no_multiple_sessions:
+                u_no_multiple_sessions = True
+            if g_exp_date < u_exp_date:
+                u_exp_date = g_exp_date
+        else:
+            u_exp_date = g_exp_date
+        seconds = u_exp_date - now
+        return datetime.strftime(u_exp_date, DEFAULT_SERVER_DATETIME_FORMAT), seconds.seconds
         
         

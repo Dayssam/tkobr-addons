@@ -51,8 +51,12 @@ class ir_sessions(osv.osv):
             index=True),
         'date_logout': fields.datetime('Logout'),
         'logout_type': fields.selection(LOGOUT_TYPES, 'Logout Type'),
+        'session_lenght': fields.datetime('Session Duration'),
+        # Add other fields about the sessions like Source IPs etc...
         }
-
+    
+    _order = 'date_logout desc'
+    
     # scheduler function to validate users session
     def validate_sessions(self, cr, uid, context=None):
         ids = self.search(cr, SUPERUSER_ID,

@@ -72,46 +72,18 @@ class Home_tkobr(openerp.addons.web.controllers.main.Home):
             values['reason3'] = '- User not allowed to login at this specific time or day'
         return request.render('web.login', values)
         
-    # insert session_id and session expiry into res.users
     def save_session(self, cr, uid, context=None):
-        if isinstance(uid, list): user_id = uid[0]
-        user_obj = request.registry.get('res.users')
-        session_obj = request.registry.get('ir.sessions')
-        user_id = user_obj.browse(cr, SUPERUSER_ID, uid, context=context)
-        g_exp_date = datetime.now() + _intervalTypes['months'](3)
-#         fields.datetime.context_timestamp(cr, SUPERUSER_ID, 
-#                 datetime.strptime(fields.datetime.now(),
-#                 DEFAULT_SERVER_DATETIME_FORMAT)) + _intervalTypes['months'](3)
-        if uid != SUPERUSER_ID or 1:
-            if user_id.interval_type:
-                u_exp_date = datetime.now() + _intervalTypes[user_id.interval_type](user_id.interval_number)
-#                 fields.datetime.context_timestamp(cr, SUPERUSER_ID,
-#                     datetime.strptime(fields.datetime.now(),
-#                     DEFAULT_SERVER_DATETIME_FORMAT)) + _intervalTypes[user_id.interval_type](user_id.interval_number)
-            else:
-                u_exp_date = g_exp_date
-            g_no_multiple_sessions = False
-            u_no_multiple_sessions = user_id.no_multiple_sessions
-            for group in user_id.groups_id:
-                if group.no_multiple_sessions:
-                    g_no_multiple_sessions = True
-                if group.interval_type:
-                    t_exp_date = datetime.now() + _intervalTypes[group.interval_type](group.interval_number)
-#                     fields.datetime.context_timestamp(cr, SUPERUSER_ID,
-#                         datetime.strptime(fields.datetime.now(),
-#                         DEFAULT_SERVER_DATETIME_FORMAT)) + _intervalTypes[group.interval_type](group.interval_number)
-                    if t_exp_date < g_exp_date:
-                        g_exp_date = t_exp_date
-            if g_no_multiple_sessions:
-                u_no_multiple_sessions = True
-            if g_exp_date < u_exp_date:
-                u_exp_date = g_exp_date
-        else:
-            u_exp_date = g_exp_date
+        if not request.uid:
+            request.uid = openerp.SUPERUSER_ID
         sid = request.httprequest.session.sid
-        return session_obj.create(cr, SUPERUSER_ID, {'user_id': uid,
+        uid = request.httprequest.session.uid
+        session_obj = request.registry.get('ir.sessions')
+        user_obj = request.registry.get('res.users')
+        u_exp_date, seconds = user_obj.get_expiring_date(cr, request.uid,
+             uid, context)
+        return session_obj.create(cr, request.uid, {'user_id': uid,
             'session_id': sid,
-            'expiration_date': datetime.strftime(u_exp_date, DEFAULT_SERVER_DATETIME_FORMAT),
+            'expiration_date': u_exp_date,
             'date_login': fields.datetime.now(),
             'logged_in': True},
             context=context)

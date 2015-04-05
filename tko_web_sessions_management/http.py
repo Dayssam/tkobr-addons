@@ -36,18 +36,7 @@ from openerp.tools.func import lazy_property
 #   
 _logger = logging.getLogger(__name__)
 
-# class OpenERPSession_tkobr(werkzeug.contrib.sessions.Session):
-#         
-#     def logout(self, keep_db=False):
-#         if not request.uid:
-#             request.uid = openerp.SUPERUSER_ID
-# #         if request.uid:
-# #             res_user.write(request.cr, request.uid,
-# #             {'logged_in': False, 'expiration_date': None, 'session_id': None}, context=request.context)
-# #         request.session.logout(keep_db=True)
-#         return super(OpenERPSession_tkobr, self).logout()
-    
- 
+
 class Root_tkobr(openerp.http.Root):
        
     def get_response(self, httprequest, result, explicit_session):
@@ -74,7 +63,14 @@ class Root_tkobr(openerp.http.Root):
 #            (the one using the cookie). That is a special feature of the Session Javascript class.
 #          - It could allow session fixation attacks.
         if not explicit_session and hasattr(response, 'set_cookie'):
-            response.set_cookie('session_id', httprequest.session.sid, max_age=90 * 24 * 60 * 60)
+            if not request.uid:
+                request.uid = openerp.SUPERUSER_ID
+            seconds = 90 * 24 * 60 * 60
+            if httprequest.session.uid:
+                user_obj = request.registry.get('res.users')
+                expiring_date, seconds = user_obj.get_expiring_date(request.cr,
+                    request.uid, httprequest.session.uid, request.context)
+            response.set_cookie('session_id', httprequest.session.sid, max_age=seconds)
            
         return response
        

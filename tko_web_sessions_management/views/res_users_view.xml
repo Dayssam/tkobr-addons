@@ -23,14 +23,14 @@
                         </group>
                         <group string="Sessions">
                             <field name="session_ids" readonly="1" nolabel="1" >
-                                <tree>
+                                <tree edit="false" create="false">
                                     <field name="logged_in" />
                                     <field name="date_login" />
                                     <field name="expiration_date" />
                                     <field name="date_logout" />
                                     <field name="logout_type" />
                                 </tree>
-                                <form>
+                                <form edit="false" create="false" delete="false">
                                     <group col="4">
                                         <field name="logged_in" />
                                         <newline />
@@ -74,14 +74,14 @@
                             </group>
                             <group string="Sessions">
                                 <field name="session_ids" readonly="1" nolabel="1" >
-                                    <tree>
+                                    <tree edit="false" create="false" delete="false">
                                         <field name="logged_in" />
                                         <field name="date_login" />
                                         <field name="expiration_date" />
                                         <field name="date_logout" />
                                         <field name="logout_type" />
                                     </tree>
-                                    <form>
+                                    <form edit="false" create="false">
                                         <group col="4">
                                             <field name="logged_in" />
                                             <newline />
