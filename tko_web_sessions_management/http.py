@@ -68,9 +68,9 @@ class Root_tkobr(openerp.http.Root):
             seconds = 90 * 24 * 60 * 60
             if httprequest.session.uid:
                 user_obj = request.registry.get('res.users')
-                expiring_date, seconds = user_obj.get_expiring_date(request.cr,
-                    request.uid, httprequest.session.uid, request.context)
-            response.set_cookie('session_id', httprequest.session.sid, max_age=seconds)
+#                 expiring_date, seconds = user_obj.get_expiring_date(request.cr,
+#                     request.uid, httprequest.session.uid, request.context)
+            response.set_cookie('session_id', httprequest.session.sid, max_age=90*24*60*60) #seconds)
            
         return response
        

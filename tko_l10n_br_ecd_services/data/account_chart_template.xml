@@ -3,7 +3,7 @@
     <data noupdate="1">
 
         <record id="ecd_chart_template" model="account.chart.template">
-            <field name="name">Brasil - Template do Plano de Contas ECD
+            <field name="name">Brasil - Planilha de Contas ECD
             </field>
             <field name="account_root_id" ref="CED0" />
             <field name="bank_account_view_id" ref="CED101010200" />
@@ -19,7 +19,20 @@
         </record>
         <!-- <field name="tax_code_root_id" ref="tax_code_chart_root"/> <field 
             name="complete_tax_set" eval="False"/> -->
-
+        <!--
+        <record id="account.sales_journal" model="account.journal">
+            <field name="name">Diário de Vendas</field>
+            <field name="code">TSAJ</field>
+            <field name="type">sale</field>
+            <field name="sequence_id" ref="account.sequence_sale_journal"/>
+            <field model="account.account" name="default_credit_account_id" ref="account.a_sale"/>
+            <field model="account.account" name="defa ult_debit_account_id" ref="account.a_sale"/>
+            <field name="analytic_journal_id" ref="account.cose_journal_sale"/>
+            <field name="user_id" ref="base.user_root"/>
+            <field eval="1" name="revenue_expense"/>
+        </record>
+        -->
+        <!--
         <record id="account.sales_journal" model="account.journal">
             <field name="name">Sales Journal</field>
             <field name="code">TSAJ</field>
@@ -27,10 +40,25 @@
             <field name="sequence_id" ref="account.sequence_sale_journal" />
             <field name="default_credit_account" ref="CED401010105" />
             <field name="default_debit_account" ref="CED101050200" />
-            <!--<field name="analytic_journal_id" ref="account.cose_journal_sale"/> -->
             <field eval="1" name="revenue_expense" />
             <field name="user_id" ref="base.user_root" />
             <field name="currency" ref="base.BRL" />
+        </record>
+        -->
+        <record id="sales_journal" model="account.journal">
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.sales_journal"/>
+            <field name="arch" type="xml">
+                <field name="default_credit_account" position="replace">
+                    <field name="default_credit_account" ref="CED401010105" />
+                </field>
+                <field name="default_debit_account" position="replace">
+                    <field name="default_debit_account" ref="CED101050200" />
+                </field>
+                <field name="currency" position="replace">
+                    <field name="currency" ref="base.BRL" />
+                </field>
+            </field>
         </record>
 
         <record id="account.refund_sales_journal" model="account.journal">
@@ -40,7 +68,6 @@
             <field name="sequence_id" ref="account.sequence_refund_sales_journal" />
             <field name="default_credit_account" ref="CED101050200" />
             <field name="default_debit_account" ref="CED301010103" />
-            <!--<field name="analytic_journal_id" ref="account.account.cose_journal_sale"/> -->
             <field name="user_id" ref="base.user_root" />
             <field name="currency" ref="base.BRL" />
         </record>
@@ -65,7 +92,6 @@
             <field name="sequence_id" ref="account.sequence_refund_purchase_journal" />
             <field name="default_debit_account" ref="CED101050200" />
             <field name="default_debit_account" ref="CED203010100" />
-            <!--<field name="analytic_journal_id" ref="account.exp"/> -->
             <field name="user_id" ref="base.user_root" />
             <field name="currency" ref="base.BRL" />
         </record>
@@ -77,7 +103,6 @@
             <field name="sequence_id" ref="account.sequence_bank_journal" />
             <field name="default_credit_account" ref="CED101050200" />
             <field name="default_debit_account" ref="CED101050200" />
-            <!--<field name="analytic_journal_id" ref="account.sit"/> -->
             <field name="user_id" ref="base.user_root" />
             <field name="currency" ref="base.BRL" />
         </record>
@@ -89,7 +114,6 @@
             <field name="sequence_id" ref="account.sequence_check_journal" />
             <field name="default_credit_account" ref="CED101050200" />
             <field name="default_debit_account" ref="CED101050200" />
-            <!--<field name="analytic_journal_id" ref="account.sit"/> -->
             <field name="user_id" ref="base.user_root" />
             <field name="currency" ref="base.BRL" />
         </record>
@@ -106,7 +130,6 @@
             <field name="with_last_closing_balance" eval="True" />
             <field name="cash_control" eval="True" />
             <field name="sequence_id" ref="account.sequence_cash_journal" />
-            <!--<field name="analytic_journal_id" ref="account.sit"/> -->
             <field name="user_id" ref="base.user_root" />
             <field name="currency" ref="base.BRL" />
         </record>
@@ -118,7 +141,6 @@
             <field name="sequence_id" ref="account.sequence_miscellaneous_journal" />
             <field name="default_credit_account" ref="CED101050200" />
             <field name="default_debit_account" ref="CED101050200" />
-            <!--<field name="analytic_journal_id" ref="account.sit"/> -->
             <field name="user_id" ref="base.user_root" />
             <field name="currency" ref="base.BRL" />
         </record>
