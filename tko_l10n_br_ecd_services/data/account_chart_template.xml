@@ -45,6 +45,7 @@
             <field name="currency" ref="base.BRL" />
         </record>
         -->
+        <!--
         <record id="sales_journal" model="account.journal">
             <field name="model">account.journal</field>
             <field name="inherit_id" ref="account.sales_journal"/>
@@ -79,7 +80,6 @@
             <field name="sequence_id" ref="account.sequence_purchase_journal" />
             <field name="default_credit_account" ref="CED203010100" />
             <field name="default_debit_account" ref="CED401030204" />
-            <!--<field name="analytic_journal_id" ref="account.exp"/> -->
             <field name="user_id" ref="base.user_root" />
             <field name="currency" ref="base.BRL" />
         </record>
@@ -165,6 +165,7 @@
             <field name="default_debit_account" ref="CED101050200" />
             <field name="currency" ref="base.BRL" />
         </record>
+        -->
 
     </data>
 </openerp>
