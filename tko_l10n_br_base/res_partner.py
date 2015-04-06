@@ -22,11 +22,14 @@
 #
 ##############################################################################
 
-import time
+import time, re
 from datetime import datetime, timedelta
 from lxml import etree 
 from openerp.osv import osv, fields
-from datetime import date, datetime
+from datetime import date,datetime
+from openerp.addons.l10n_br_base.tools import fiscal 
+from openerp.exceptions import Warning
+from openerp import _
 
 
 AVAILABLE_ZONES = [
