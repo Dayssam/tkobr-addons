@@ -29,7 +29,17 @@ from datetime import date, datetime, time, timedelta
 from openerp.tools import DEFAULT_SERVER_DATETIME_FORMAT
 from openerp import SUPERUSER_ID
 from openerp.http import request
+from openerp.http import Response
+from openerp import http
 from openerp.tools.translate import _
+import werkzeug.contrib.sessions
+import werkzeug.datastructures
+import werkzeug.exceptions
+import werkzeug.local
+import werkzeug.routing
+import werkzeug.wrappers
+import werkzeug.wsgi
+from werkzeug.wsgi import wrap_file
 
 _logger = logging.getLogger(__name__)
 
@@ -71,3 +81,14 @@ class ir_sessions(osv.osv):
                     'date_logout': fields.datetime.now(),
                     'logout_type': 'to'}, context=context)
         return True
+    
+    def action_close_session(self, cr, uid, ids, context):
+        session_ids = self.browse(cr, SUPERUSER_ID, ids)
+        for session_id in session_ids:
+            response = werkzeug.BaseResponse()
+            response.delete_cookie(session_id.session_id)
+            #openerp.http.Root.session_store .SessionStore() .delete(session_id.session_id)
+#             openerp.http.werkzeug.contrib.sessions.SessionStore(session_class=openerp.http.OpenERPSession).delete(session_id.session_id)
+        return werkzeug.utils.redirect('/web/login?db=%s' % cr.dbname, 303)
+                
+                

@@ -28,6 +28,13 @@ from openerp.osv import fields, osv, orm
 from datetime import date, datetime, time, timedelta
 from openerp import SUPERUSER_ID
 import werkzeug.contrib.sessions
+import werkzeug.datastructures
+import werkzeug.exceptions
+import werkzeug.local
+import werkzeug.routing
+import werkzeug.wrappers
+import werkzeug.wsgi
+from werkzeug.wsgi import wrap_file
 from openerp.http import request
 from openerp.tools.translate import _
 from openerp.http import Response
