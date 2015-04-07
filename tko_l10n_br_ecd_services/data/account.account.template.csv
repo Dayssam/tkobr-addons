@@ -15,7 +15,7 @@ ECD101010400,1.01.01.04.00,Contas Bancárias - Subvenções,ECD101010300,Contas 
 ECD101010500,1.01.01.05.00,Contas Bancárias - Doações,ECD101010400,Contas Bancárias - Doações,FALSE,view,account.data_account_type_view
 ECD101010600,1.01.01.06.00,Contas Bancárias - Outros Recursos Sujeitos a Restrições,ECD101010500,Contas Bancárias - Outros Recursos Sujeitos a Restrições,FALSE,view,account.data_account_type_view
 ECD101010700,1.01.01.07.00,Valores Mobiliários,ECD101010600,Valores Mobiliários,FALSE,view,account.data_account_type_view
-ECD101010701,1.01.01.07.01,Valores Mobiliários - Mercado de Capitais Interno,ECD1010107,Valores Mobiliários - Mercado de Capitais Interno,FALSE,view,account.data_account_type_view
+ECD101010701,1.01.01.07.01,Valores Mobiliários - Mercado de Capitais Interno,ECD101010700,Valores Mobiliários - Mercado de Capitais Interno,FALSE,view,account.data_account_type_view
 ECD101010702,1.01.01.07.02,Valores Mobiliários - Mercado de Capitais Externo,ECD101010700,Valores Mobiliários - Mercado de Capitais Externo,FALSE,view,account.data_account_type_view
 ECD101010800,1.01.01.08.00,Valores Mobiliários - Aplicações de Subvenções,ECD10101,Valores Mobiliários - Aplicações de Subvenções,FALSE,view,account.data_account_type_view
 ECD101010900,1.01.01.09.00,Valores Mobiliários - Aplicações de Doações,ECD101010800,Valores Mobiliários - Aplicações de Doações,FALSE,view,account.data_account_type_view
