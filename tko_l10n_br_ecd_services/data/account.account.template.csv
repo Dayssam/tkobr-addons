@@ -8,19 +8,19 @@ ECD101010101,1.01.01.01.01,Caixa - Central/Matriz,ECD101010100,Caixa - Central/M
 ECD101010102,1.01.01.01.02,Caixa - Filial A,ECD101010100,Caixa - Filial A,FALSE,liquidity,account.data_account_type_cash
 ECD101010103,1.01.01.01.03,Caixa - Filial B,ECD101010100,Caixa - Filial B,FALSE,liquidity,account.data_account_type_cash
 ECD101010200,1.01.01.02.00,Bancos,ECD10101,Bancos,FALSE,view,account.data_account_type_view
-ECD101010201,1.01.01.02.01,Banco do Brasil c/c 111111-0,ECD101010200,Banco do Brasil c/c 111111-0,FALSE,liquidity,account.data_account_type_bank
+ECD101010201,1.01.01.02.01,Banco c/c 111111-0,ECD101010200,Banco c/c 111111-0,FALSE,liquidity,account.data_account_type_bank
 ECD101010202,1.01.01.02.02,Banco Bradesco c/c 111111-0,ECD101010200,Banco Bradesco c/c 111111-0,FALSE,liquidity,account.data_account_type_bank
 ECD101010300,1.01.01.03.00,Recursos no Exterior Decorrentes de Exportação,ECD10101,Recursos no Exterior Decorrentes de Exportação,FALSE,view,account.data_account_type_view
-ECD101010400,1.01.01.04.00,Contas Bancárias - Subvenções,ECD101010300,Contas Bancárias - Subvenções,FALSE,view,account.data_account_type_view
-ECD101010500,1.01.01.05.00,Contas Bancárias - Doações,ECD101010400,Contas Bancárias - Doações,FALSE,view,account.data_account_type_view
-ECD101010600,1.01.01.06.00,Contas Bancárias - Outros Recursos Sujeitos a Restrições,ECD101010500,Contas Bancárias - Outros Recursos Sujeitos a Restrições,FALSE,view,account.data_account_type_view
-ECD101010700,1.01.01.07.00,Valores Mobiliários,ECD101010600,Valores Mobiliários,FALSE,view,account.data_account_type_view
-ECD101010701,1.01.01.07.01,Valores Mobiliários - Mercado de Capitais Interno,ECD1010107,Valores Mobiliários - Mercado de Capitais Interno,FALSE,view,account.data_account_type_view
+ECD101010400,1.01.01.04.00,Contas Bancárias - Subvenções,ECD10101,Contas Bancárias - Subvenções,FALSE,view,account.data_account_type_view
+ECD101010500,1.01.01.05.00,Contas Bancárias - Doações,ECD10101,Contas Bancárias - Doações,FALSE,view,account.data_account_type_view
+ECD101010600,1.01.01.06.00,Contas Bancárias - Outros Recursos Sujeitos a Restrições,ECD10101,Contas Bancárias - Outros Recursos Sujeitos a Restrições,FALSE,view,account.data_account_type_view
+ECD101010700,1.01.01.07.00,Valores Mobiliários,ECD10101,Valores Mobiliários,FALSE,view,account.data_account_type_view
+ECD101010701,1.01.01.07.01,Valores Mobiliários - Mercado de Capitais Interno,ECD101010700,Valores Mobiliários - Mercado de Capitais Interno,FALSE,view,account.data_account_type_view
 ECD101010702,1.01.01.07.02,Valores Mobiliários - Mercado de Capitais Externo,ECD101010700,Valores Mobiliários - Mercado de Capitais Externo,FALSE,view,account.data_account_type_view
 ECD101010800,1.01.01.08.00,Valores Mobiliários - Aplicações de Subvenções,ECD10101,Valores Mobiliários - Aplicações de Subvenções,FALSE,view,account.data_account_type_view
-ECD101010900,1.01.01.09.00,Valores Mobiliários - Aplicações de Doações,ECD101010800,Valores Mobiliários - Aplicações de Doações,FALSE,view,account.data_account_type_view
-ECD101011000,1.01.01.10.00,Valores Mobiliários - Aplicações de Outros Recursos Sujeitos a Restrições,ECD101010900,Valores Mobiliários - Aplicações de Outros Recursos Sujeitos a Restrições,FALSE,view,account.data_account_type_view
-ECD101011100,1.01.01.11.00,Outras Contas do Disponivel,ECD101011000,Outras Contas do Disponivel,FALSE,view,account.data_account_type_view
+ECD101010900,1.01.01.09.00,Valores Mobiliários - Aplicações de Doações,ECD10101,Valores Mobiliários - Aplicações de Doações,FALSE,view,account.data_account_type_view
+ECD101011000,1.01.01.10.00,Valores Mobiliários - Aplicações de Outros Recursos Sujeitos a Restrições,ECD10101,Valores Mobiliários - Aplicações de Outros Recursos Sujeitos a Restrições,FALSE,view,account.data_account_type_view
+ECD101011100,1.01.01.11.00,Outras Contas do Disponivel,ECD10101,Outras Contas do Disponivel,FALSE,view,account.data_account_type_view
 ECD10103,1.01.03,ESTOQUES,ECD101,ESTOQUES,FALSE,view,account.data_account_type_view
 ECD101030101,1.01.03.01.01,Mercadorias para Revenda,ECD10103,Mercadorias para Revenda,FALSE,other,account.data_account_type_asset
 ECD101030102,1.01.03.01.02,Insumos (materiais diretos),ECD10103,Insumos (materiais diretos),FALSE,other,account.data_account_type_asset
@@ -35,8 +35,8 @@ ECD101030201,1.01.03.02.01,Construções em Andamento de Imóveis Destinados à 
 ECD101030300,1.01.03.03.00,Estoques Destinados à Doação,ECD10103,Estoques Destinados à Doação,FALSE,other,account.data_account_type_asset
 ECD101030400,1.01.03.04.00,Outras Contas de Estoques,ECD10103,Outras Contas de Estoques,FALSE,other,account.data_account_type_asset
 ECD10105,1.01.05,CRÉDITOS,ECD101,CRÉDITOS,FALSE,view,account.data_account_type_view
-ECD101050100,1.01.05.01.00,Adiantamentos a Fornecedores,ECD10105,Adiantamentos a Fornecedores,FALSE,payable,account.data_account_type_asset
-ECD101050200,1.01.05.02.00,Clientes Circulante,ECD10105,Clientes Circulante,FALSE,receivable,account.data_account_type_receivable
+ECD101050100,1.01.05.01.00,Adiantamentos a Fornecedores,ECD10105,Adiantamentos a Fornecedores,TRUE,payable,account.data_account_type_asset
+ECD101050200,1.01.05.02.00,Clientes Circulante,ECD10105,Clientes Circulante,TRUE,receivable,account.data_account_type_receivable
 ECD101050300,1.01.05.03.00,Créditos Fiscais CSLL - Diferenças Temporárias e Base de Cálculo Negativa,ECD10105,Créditos Fiscais CSLL - Diferenças Temporárias e Base de Cálculo Negativa,FALSE,other,account.data_account_type_asset
 ECD101050400,1.01.05.04.00,Créditos Fiscais IRPJ - Diferenças Temporárias e Prejuízos Fiscais,ECD10105,Créditos Fiscais IRPJ - Diferenças Temporárias e Prejuízos Fiscais,FALSE,other,account.data_account_type_asset
 ECD101050501,1.01.05.05.01,Imposto de Renda a Recuperar,ECD101050400,Imposto de Renda a Recuperar,FALSE,other,account.data_account_type_asset
@@ -59,7 +59,7 @@ ECD101090107,1.01.09.01.07,(-) Provisões para Ajuste ao Valor Provável de Real
 ECD101090190,1.01.09.01.90,(-) Outras Contas Retificadoras,ECD10109,(-) Outras Contas Retificadoras,FALSE,other,account.data_account_type_asset
 ECD107,1.07,NÃO CIRCULANTE,ECD1,NÃO CIRCULANTE,FALSE,view,account.data_account_type_view
 ECD10700,1.07.00,REALIZÁVEL A LONGO PRAZO,ECD107,REALIZÁVEL A LONGO PRAZO,FALSE,view,account.data_account_type_view
-ECD107000100,1.07.00.01.00,Clientes Não Circulante,ECD10700,Clientes Não Circulante,FALSE,receivable,account.data_account_type_asset
+ECD107000100,1.07.00.01.00,Clientes Não Circulante,ECD10700,Clientes Não Circulante,TRUE,receivable,account.data_account_type_asset
 ECD107000200,1.07.00.02.00,Créditos com Pessoas Ligadas (Físicas/Jurídicas),ECD10700,Créditos com Pessoas Ligadas (Físicas/Jurídicas),FALSE,other,account.data_account_type_asset
 ECD107000300,1.07.00.03.00,Valores Mobiliários,ECD10700,Valores Mobiliários,FALSE,other,account.data_account_type_asset
 ECD107000400,1.07.00.04.00,Depósitos Judiciais,ECD10700,Depósitos Judiciais,FALSE,other,account.data_account_type_asset
@@ -119,8 +119,8 @@ ECD107070600,1.07.07.06.00,(-) Amortização do Diferido,ECD10707,(-) Amortizaç
 ECD2,2,PASSIVO,ECD0,PASSIVO,FALSE,view,account.data_account_type_view
 ECD201,2.01,CIRCULANTE,ECD2,CIRCULANTE,FALSE,view,account.data_account_type_view
 ECD20101,2.01.01,OBRIGAÇÕES DE CURTO PRAZO,ECD201,OBRIGAÇÕES DE CURTO PRAZO,FALSE,view,account.data_account_type_view
-ECD201010100,2.01.01.01.00,Fornecedores Circulante,ECD20101,Fornecedores Circulante,FALSE,payable,account.data_account_type_payable
-ECD201010101,2.01.01.01.01,Adiantamentos de Clientes,ECD201010100,Adiantamentos de Clientes,FALSE,receivable,account.data_account_type_liability
+ECD201010100,2.01.01.01.00,Fornecedores Circulante,ECD20101,Fornecedores Circulante,TRUE,payable,account.data_account_type_payable
+ECD201010101,2.01.01.01.01,Adiantamentos de Clientes,ECD201010100,Adiantamentos de Clientes,TRUE,receivable,account.data_account_type_liability
 ECD201010201,2.01.01.02.01,Financiamentos a Curto Prazo - Sistema Financeiro Nacional,ECD201010100,Financiamentos a Curto Prazo - Sistema Financeiro Nacional,FALSE,other,account.data_account_type_liability
 ECD201010202,2.01.01.02.02,Arrendamento Mercantil (Financeiro) a Curto Prazo - Sistema Financeiro Nacional,ECD201010100,Arrendamento Mercantil (Financeiro) a Curto Prazo - Sistema Financeiro Nacional,FALSE,other,account.data_account_type_liability
 ECD201010203,2.01.01.02.03,Financiamentos a Curto Prazo - Outros,ECD201010100,Financiamentos a Curto Prazo - Outros,FALSE,other,account.data_account_type_liability
@@ -147,7 +147,7 @@ ECD201011300,2.01.01.13.00,Outras Contas do Circulante,ECD20101,Outras Contas do
 ECD201019000,2.01.01.90.00,(-) Contas Retificadoras,ECD20101,(-) Contas Retificadoras,FALSE,other,account.data_account_type_liability
 ECD203,2.03,NÃO-CIRCULANTE,ECD2,NÃO-CIRCULANTE,FALSE,view,account.data_account_type_view
 ECD20301,2.03.01,OBRIGAÇÕES A LONGO PRAZO,ECD203,OBRIGAÇÕES A LONGO PRAZO,FALSE,view,account.data_account_type_view
-ECD203010100,2.03.01.01.00,Fornecedores Não Circulante,ECD20301,Fornecedores Não Circulante,FALSE,payable,account.data_account_type_payable
+ECD203010100,2.03.01.01.00,Fornecedores Não Circulante,ECD20301,Fornecedores Não Circulante,TRUE,payable,account.data_account_type_payable
 ECD203010200,2.03.01.02.00,Financiamentos a Longo Prazo - Sistema Financeiro Nacional,ECD20301,Financiamentos a Longo Prazo - Sistema Financeiro Nacional,FALSE,other,account.data_account_type_liability
 ECD203010202,2.03.01.02.02,Arrendamento Mercantil (Financeiro) a Longo Prazo - Sistema Financeiro Nacional,ECD203010200,Arrendamento Mercantil (Financeiro) a Longo Prazo - Sistema Financeiro Nacional,FALSE,other,account.data_account_type_liability
 ECD203010203,2.03.01.02.03,Financiamentos a Longo Prazo - Brasil - Outros,ECD203010200,Financiamentos a Longo Prazo - Brasil - Outros,FALSE,other,account.data_account_type_liability
@@ -222,10 +222,10 @@ ECD3010101030600,3.01.01.01.03.06.00,(-) Demais Impostos e Contribuições Incid
 ECD3010103,3.01.01.03,CUSTO DOS BENS E SERVIÇOS VENDIDOS,ECD30101,CUSTO DOS BENS E SERVIÇOS VENDIDOS,FALSE,view,account.data_account_type_view
 ECD301010301,3.01.01.03.01,CUSTO DOS PRODUTOS DE FABRICAÇÃO PRÓPRIA VENDIDOS,ECD3010103,CUSTO DOS PRODUTOS DE FABRICAÇÃO PRÓPRIA VENDIDOS,FALSE,view,account.data_account_type_view
 ECD3010103010000,3.01.01.03.01.00.00,Custo dos Produtos de Fabricação Própria Vendidos,ECD3010103,Custo dos Produtos de Fabricação Própria Vendidos,FALSE,other,account.data_account_type_expense
-ECD301010303,3.01.01.03.03,CUSTO DAS MERCADORIAS REVENDIDAS,ECD3010103010000,CUSTO DAS MERCADORIAS REVENDIDAS,FALSE,view,account.data_account_type_view
+ECD301010303,3.01.01.03.03,CUSTO DAS MERCADORIAS REVENDIDAS,ECD3010103,CUSTO DAS MERCADORIAS REVENDIDAS,FALSE,view,account.data_account_type_view
 ECD3010103030000,3.01.01.03.03.00.00,Custo das Mercadorias Revendidas,ECD3010103,Custo das Mercadorias Revendidas,FALSE,other,account.data_account_type_expense
 ECD3010103050000,3.01.01.03.05.00.00,Custo dos Serviços Vendidos,ECD3010103,Custo dos Serviços Vendidos,FALSE,other,account.data_account_type_expense
-ECD301010307,3.01.01.03.07,CUSTO DAS UNIDADES IMOBILIÁRIAS VENDIDAS,ECD3010103050000,CUSTO DAS UNIDADES IMOBILIÁRIAS VENDIDAS,FALSE,view,account.data_account_type_view
+ECD301010307,3.01.01.03.07,CUSTO DAS UNIDADES IMOBILIÁRIAS VENDIDAS,ECD3010103,CUSTO DAS UNIDADES IMOBILIÁRIAS VENDIDAS,FALSE,view,account.data_account_type_view
 ECD3010103070100,3.01.01.03.07.01.00,Custo das Unidades Imobiliárias Vendidas,ECD301010307,Custo das Unidades Imobiliárias Vendidas,FALSE,other,account.data_account_type_expense
 ECD301010309,3.01.01.03.09,AJUSTES DE ESTOQUES DECORRENTES DE ARBITRAMENTO,ECD3010103,AJUSTES DE ESTOQUES DECORRENTES DE ARBITRAMENTO,FALSE,view,account.data_account_type_view
 ECD3010105,3.01.01.05,OUTRAS RECEITAS OPERACIONAIS,ECD30101,OUTRAS RECEITAS OPERACIONAIS,FALSE,view,account.data_account_type_view
@@ -345,7 +345,7 @@ ECD3050101030600,3.05.01.01.03.06.00,(-) Demais Impostos e Contribuições Incid
 ECD3050103,3.05.01.03,CUSTO DOS BENS E SERVIÇOS VENDIDOS,ECD30501,CUSTO DOS BENS E SERVIÇOS VENDIDOS,FALSE,view,account.data_account_type_view
 ECD305010301,3.05.01.03.01,CUSTO DOS PRODUTOS DA ATIVIDADE RURAL VENDIDOS,ECD3050103,CUSTO DOS PRODUTOS DA ATIVIDADE RURAL VENDIDOS,FALSE,view,account.data_account_type_view
 ECD3050103010000,3.05.01.03.01.00.00,Custo dos Produtos Vendidos da Atividade Rural,ECD3050103,Custo dos Produtos Vendidos da Atividade Rural,FALSE,other,account.data_account_type_expense
-ECD305010309,3.05.01.03.09,AJUSTES DE ESTOQUES DECORRENTES DE ARBITRAMENTO,ECD3050103010000,AJUSTES DE ESTOQUES DECORRENTES DE ARBITRAMENTO,FALSE,view,account.data_account_type_view
+ECD305010309,3.05.01.03.09,AJUSTES DE ESTOQUES DECORRENTES DE ARBITRAMENTO,ECD3050103,AJUSTES DE ESTOQUES DECORRENTES DE ARBITRAMENTO,FALSE,view,account.data_account_type_view
 ECD3050105,3.05.01.05,OUTRAS RECEITAS OPERACIONAIS,ECD30501,OUTRAS RECEITAS OPERACIONAIS,FALSE,view,account.data_account_type_view
 ECD305010501,3.05.01.05.01,OUTRAS RECEITAS OPERACIONAIS,ECD3050105,OUTRAS RECEITAS OPERACIONAIS,FALSE,view,account.data_account_type_view
 ECD3050105010100,3.05.01.05.01.01.00,Variações Cambiais Ativas,ECD305010501,Variações Cambiais Ativas,FALSE,other,account.data_account_type_income
@@ -637,7 +637,7 @@ ECD501031800,5.01.03.18.00,Serviços Prestados por Pessoa Física sem Vínculo E
 ECD501031900,5.01.03.19.00,Serviços Prestados Pessoa Jurídica,ECD50103,Serviços Prestados Pessoa Jurídica,FALSE,other,account.data_account_type_expense
 ECD501032000,5.01.03.20.00,Royalties e Assistência Técnica - PAÍS,ECD50103,Royalties e Assistência Técnica - PAÍS,FALSE,other,account.data_account_type_expense
 ECD501032100,5.01.03.21.00,Royalties e Assistência Técnica - EXTERIOR,ECD50103,Royalties e Assistência Técnica - EXTERIOR,FALSE,other,account.data_account_type_expense
-ECD501039000,5.01.03.90.00,Outros Custos,ECD501032100,Outros Custos,FALSE,view,account.data_account_type_view
+ECD501039000,5.01.03.90.00,Outros Custos,ECD50103,Outros Custos,FALSE,view,account.data_account_type_view
 ECD501039001,5.01.03.90.01,Outros Custos Reembolsáveis,ECD501039000,Outros Custos Reembolsáveis,FALSE,other,account.data_account_type_expense
 ECD501039002,5.01.03.90.02,Outros Custos Não Reembolsáveis,ECD501039000,Outros Custos Não Reembolsáveis,FALSE,other,account.data_account_type_expense
 ECD50105,5.01.05,CUSTO DOS PRODUTOS DE FABRICAÇÃO PRÓPRIA PRODUZIDOS DA ATIVIDADE RURAL,ECD501,CUSTO DOS PRODUTOS DE FABRICAÇÃO PRÓPRIA PRODUZIDOS DA ATIVIDADE RURAL,FALSE,view,account.data_account_type_view
