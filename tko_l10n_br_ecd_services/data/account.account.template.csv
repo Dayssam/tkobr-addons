@@ -10,17 +10,17 @@ ECD101010103,1.01.01.01.03,Caixa - Filial B,ECD101010100,Caixa - Filial B,FALSE,
 ECD101010200,1.01.01.02.00,Bancos,ECD10101,Bancos,FALSE,view,account.data_account_type_view
 ECD101010201,1.01.01.02.01,Banco c/c 111111-0,ECD101010200,Banco c/c 111111-0,FALSE,liquidity,account.data_account_type_bank
 ECD101010202,1.01.01.02.02,Banco Bradesco c/c 111111-0,ECD101010200,Banco Bradesco c/c 111111-0,FALSE,liquidity,account.data_account_type_bank
-ECD101010300,1.01.01.03.00,Recursos no Exterior Decorrentes de Exportação,ECD10101,Recursos no Exterior Decorrentes de Exportação,FALSE,view,account.data_account_type_view
-ECD101010400,1.01.01.04.00,Contas Bancárias - Subvenções,ECD10101,Contas Bancárias - Subvenções,FALSE,view,account.data_account_type_view
-ECD101010500,1.01.01.05.00,Contas Bancárias - Doações,ECD10101,Contas Bancárias - Doações,FALSE,view,account.data_account_type_view
-ECD101010600,1.01.01.06.00,Contas Bancárias - Outros Recursos Sujeitos a Restrições,ECD10101,Contas Bancárias - Outros Recursos Sujeitos a Restrições,FALSE,view,account.data_account_type_view
-ECD101010700,1.01.01.07.00,Valores Mobiliários,ECD10101,Valores Mobiliários,FALSE,view,account.data_account_type_view
-ECD101010701,1.01.01.07.01,Valores Mobiliários - Mercado de Capitais Interno,ECD101010700,Valores Mobiliários - Mercado de Capitais Interno,FALSE,view,account.data_account_type_view
-ECD101010702,1.01.01.07.02,Valores Mobiliários - Mercado de Capitais Externo,ECD101010700,Valores Mobiliários - Mercado de Capitais Externo,FALSE,view,account.data_account_type_view
-ECD101010800,1.01.01.08.00,Valores Mobiliários - Aplicações de Subvenções,ECD10101,Valores Mobiliários - Aplicações de Subvenções,FALSE,view,account.data_account_type_view
-ECD101010900,1.01.01.09.00,Valores Mobiliários - Aplicações de Doações,ECD10101,Valores Mobiliários - Aplicações de Doações,FALSE,view,account.data_account_type_view
-ECD101011000,1.01.01.10.00,Valores Mobiliários - Aplicações de Outros Recursos Sujeitos a Restrições,ECD10101,Valores Mobiliários - Aplicações de Outros Recursos Sujeitos a Restrições,FALSE,view,account.data_account_type_view
-ECD101011100,1.01.01.11.00,Outras Contas do Disponivel,ECD10101,Outras Contas do Disponivel,FALSE,view,account.data_account_type_view
+ECD101010300,1.01.01.03.00,Recursos no Exterior Decorrentes de Exportação,ECD10101,Recursos no Exterior Decorrentes de Exportação,FALSE,liquidity,account.data_account_type_asset
+ECD101010400,1.01.01.04.00,Contas Bancárias - Subvenções,ECD10101,Contas Bancárias - Subvenções,FALSE,liquidity,account.data_account_type_asset
+ECD101010500,1.01.01.05.00,Contas Bancárias - Doações,ECD10101,Contas Bancárias - Doações,FALSE,liquidity,account.data_account_type_asset
+ECD101010600,1.01.01.06.00,Contas Bancárias - Outros Recursos Sujeitos a Restrições,ECD10101,Contas Bancárias - Outros Recursos Sujeitos a Restrições,FALSE,liquidity,account.data_account_type_asset
+ECD101010700,1.01.01.07.00,Valores Mobiliários,ECD10101,Valores Mobiliários,FALSE,liquidity,account.data_account_type_asset
+ECD101010701,1.01.01.07.01,Valores Mobiliários - Mercado de Capitais Interno,ECD10101,Valores Mobiliários - Mercado de Capitais Interno,FALSE,liquidity,account.data_account_type_asset
+ECD101010702,1.01.01.07.02,Valores Mobiliários - Mercado de Capitais Externo,ECD10101,Valores Mobiliários - Mercado de Capitais Externo,FALSE,liquidity,account.data_account_type_asset
+ECD101010800,1.01.01.08.00,Valores Mobiliários - Aplicações de Subvenções,ECD10101,Valores Mobiliários - Aplicações de Subvenções,FALSE,liquidity,account.data_account_type_asset
+ECD101010900,1.01.01.09.00,Valores Mobiliários - Aplicações de Doações,ECD10101,Valores Mobiliários - Aplicações de Doações,FALSE,liquidity,account.data_account_type_asset
+ECD101011000,1.01.01.10.00,Valores Mobiliários - Aplicações de Outros Recursos Sujeitos a Restrições,ECD10101,Valores Mobiliários - Aplicações de Outros Recursos Sujeitos a Restrições,FALSE,liquidity,account.data_account_type_asset
+ECD101011100,1.01.01.11.00,Outras Contas do Disponivel,ECD10101,Outras Contas do Disponivel,FALSE,liquidity,account.data_account_type_asset
 ECD10103,1.01.03,ESTOQUES,ECD101,ESTOQUES,FALSE,view,account.data_account_type_view
 ECD101030101,1.01.03.01.01,Mercadorias para Revenda,ECD10103,Mercadorias para Revenda,FALSE,other,account.data_account_type_asset
 ECD101030102,1.01.03.01.02,Insumos (materiais diretos),ECD10103,Insumos (materiais diretos),FALSE,other,account.data_account_type_asset
@@ -31,21 +31,21 @@ ECD101030106,1.01.03.01.06,Insumos Agropecuários,ECD10103,Insumos Agropecuário
 ECD101030107,1.01.03.01.07,Produtos Agropecuários em Formação,ECD10103,Produtos Agropecuários em Formação,FALSE,other,account.data_account_type_asset
 ECD101030108,1.01.03.01.08,Produtos Agropecuários Acabados,ECD10103,Produtos Agropecuários Acabados,FALSE,other,account.data_account_type_asset
 ECD101030200,1.01.03.02.00,Imóveis Destinados à Venda,ECD10103,Imóveis Destinados à Venda,FALSE,other,account.data_account_type_asset
-ECD101030201,1.01.03.02.01,Construções em Andamento de Imóveis Destinados à Venda,ECD101030200,Construções em Andamento de Imóveis Destinados à Venda,FALSE,other,account.data_account_type_asset
+ECD101030201,1.01.03.02.01,Construções em Andamento de Imóveis Destinados à Venda,ECD10103,Construções em Andamento de Imóveis Destinados à Venda,FALSE,other,account.data_account_type_asset
 ECD101030300,1.01.03.03.00,Estoques Destinados à Doação,ECD10103,Estoques Destinados à Doação,FALSE,other,account.data_account_type_asset
 ECD101030400,1.01.03.04.00,Outras Contas de Estoques,ECD10103,Outras Contas de Estoques,FALSE,other,account.data_account_type_asset
 ECD10105,1.01.05,CRÉDITOS,ECD101,CRÉDITOS,FALSE,view,account.data_account_type_view
-ECD101050100,1.01.05.01.00,Adiantamentos a Fornecedores,ECD10105,Adiantamentos a Fornecedores,TRUE,payable,account.data_account_type_asset
+ECD101050100,1.01.05.01.00,Adiantamentos a Fornecedores,ECD10105,Adiantamentos a Fornecedores,TRUE,payable,account.data_account_type_payable
 ECD101050200,1.01.05.02.00,Clientes Circulante,ECD10105,Clientes Circulante,TRUE,receivable,account.data_account_type_receivable
 ECD101050300,1.01.05.03.00,Créditos Fiscais CSLL - Diferenças Temporárias e Base de Cálculo Negativa,ECD10105,Créditos Fiscais CSLL - Diferenças Temporárias e Base de Cálculo Negativa,FALSE,other,account.data_account_type_asset
 ECD101050400,1.01.05.04.00,Créditos Fiscais IRPJ - Diferenças Temporárias e Prejuízos Fiscais,ECD10105,Créditos Fiscais IRPJ - Diferenças Temporárias e Prejuízos Fiscais,FALSE,other,account.data_account_type_asset
-ECD101050501,1.01.05.05.01,Imposto de Renda a Recuperar,ECD101050400,Imposto de Renda a Recuperar,FALSE,other,account.data_account_type_asset
-ECD101050502,1.01.05.05.02,IPI a Recuperar,ECD101050400,IPI a Recuperar,FALSE,other,account.data_account_type_asset
-ECD101050503,1.01.05.05.03,PIS e COFINS a Recuperar,ECD101050400,PIS e COFINS a Recuperar,FALSE,other,account.data_account_type_asset
-ECD101050504,1.01.05.05.04,CSLL a Recuperar,ECD101050400,CSLL a Recuperar,FALSE,other,account.data_account_type_asset
-ECD101050505,1.01.05.05.05,ICMS e Contribuições a Recuperar,ECD101050400,ICMS e Contribuições a Recuperar,FALSE,other,account.data_account_type_asset
-ECD101050506,1.01.05.05.06,Tributos Municipais a Recuperar,ECD101050400,Tributos Municipais a Recuperar,FALSE,other,account.data_account_type_asset
-ECD101050590,1.01.05.05.90,Outros Impostos e Contribuições a Recuperar,ECD101050400,Outros Impostos e Contribuições a Recuperar,FALSE,other,account.data_account_type_asset
+ECD101050501,1.01.05.05.01,Imposto de Renda a Recuperar,ECD10105,Imposto de Renda a Recuperar,FALSE,other,account.data_account_type_asset
+ECD101050502,1.01.05.05.02,IPI a Recuperar,ECD10105,IPI a Recuperar,FALSE,other,account.data_account_type_asset
+ECD101050503,1.01.05.05.03,PIS e COFINS a Recuperar,ECD10105,PIS e COFINS a Recuperar,FALSE,other,account.data_account_type_asset
+ECD101050504,1.01.05.05.04,CSLL a Recuperar,ECD10105,CSLL a Recuperar,FALSE,other,account.data_account_type_asset
+ECD101050505,1.01.05.05.05,ICMS e Contribuições a Recuperar,ECD10105,ICMS e Contribuições a Recuperar,FALSE,other,account.data_account_type_asset
+ECD101050506,1.01.05.05.06,Tributos Municipais a Recuperar,ECD10105,Tributos Municipais a Recuperar,FALSE,other,account.data_account_type_asset
+ECD101050590,1.01.05.05.90,Outros Impostos e Contribuições a Recuperar,ECD10105,Outros Impostos e Contribuições a Recuperar,FALSE,other,account.data_account_type_asset
 ECD101050600,1.01.05.06.00,Créditos por Contribuições e Doações,ECD10105,Créditos por Contribuições e Doações,FALSE,other,account.data_account_type_asset
 ECD101050700,1.01.05.07.00,Outras Contas de Créditos,ECD10105,Outras Contas de Créditos,FALSE,other,account.data_account_type_asset
 ECD10107,1.01.07,DESPESAS DO EXERCÍCIO SEGUINTE,ECD101,DESPESAS DO EXERCÍCIO SEGUINTE,FALSE,view,account.data_account_type_view
@@ -59,7 +59,7 @@ ECD101090107,1.01.09.01.07,(-) Provisões para Ajuste ao Valor Provável de Real
 ECD101090190,1.01.09.01.90,(-) Outras Contas Retificadoras,ECD10109,(-) Outras Contas Retificadoras,FALSE,other,account.data_account_type_asset
 ECD107,1.07,NÃO CIRCULANTE,ECD1,NÃO CIRCULANTE,FALSE,view,account.data_account_type_view
 ECD10700,1.07.00,REALIZÁVEL A LONGO PRAZO,ECD107,REALIZÁVEL A LONGO PRAZO,FALSE,view,account.data_account_type_view
-ECD107000100,1.07.00.01.00,Clientes Não Circulante,ECD10700,Clientes Não Circulante,TRUE,receivable,account.data_account_type_asset
+ECD107000100,1.07.00.01.00,Clientes Não Circulante,ECD10700,Clientes Não Circulante,TRUE,receivable,account.data_account_type_receivable
 ECD107000200,1.07.00.02.00,Créditos com Pessoas Ligadas (Físicas/Jurídicas),ECD10700,Créditos com Pessoas Ligadas (Físicas/Jurídicas),FALSE,other,account.data_account_type_asset
 ECD107000300,1.07.00.03.00,Valores Mobiliários,ECD10700,Valores Mobiliários,FALSE,other,account.data_account_type_asset
 ECD107000400,1.07.00.04.00,Depósitos Judiciais,ECD10700,Depósitos Judiciais,FALSE,other,account.data_account_type_asset
@@ -84,11 +84,11 @@ ECD107019700,1.07.01.97.00,(-) Outras Contas Retificadoras,ECD10701,(-) Outras C
 ECD10704,1.07.04,IMOBILIZADO,ECD107,IMOBILIZADO,FALSE,view,account.data_account_type_view
 ECD107040100,1.07.04.01.00,Terrenos,ECD10704,Terrenos,FALSE,other,account.data_account_type_asset
 ECD107040200,1.07.04.02.00,Edifícios e Construções,ECD10704,Edifícios e Construções,FALSE,other,account.data_account_type_asset
-ECD107040201,1.07.04.02.01,Construções em Andamento,ECD107040200,Construções em Andamento,FALSE,other,account.data_account_type_asset
+ECD107040201,1.07.04.02.01,Construções em Andamento,ECD10704,Construções em Andamento,FALSE,other,account.data_account_type_asset
 ECD107040300,1.07.04.03.00,"Equipamentos, Máquinas e Instalações Industriais",ECD10704,"Equipamentos, Máquinas e Instalações Industriais",FALSE,other,account.data_account_type_asset
 ECD107040400,1.07.04.04.00,Veículos,ECD10704,Veículos,FALSE,other,account.data_account_type_asset
-ECD107040401,1.07.04.04.01,Embarcações,ECD107040400,Embarcações,FALSE,other,account.data_account_type_asset
-ECD107040402,1.07.04.04.02,Aeronaves,ECD107040400,Aeronaves,FALSE,other,account.data_account_type_asset
+ECD107040401,1.07.04.04.01,Embarcações,ECD10704,Embarcações,FALSE,other,account.data_account_type_asset
+ECD107040402,1.07.04.04.02,Aeronaves,ECD10704,Aeronaves,FALSE,other,account.data_account_type_asset
 ECD107040500,1.07.04.05.00,"Móveis, Utensílios e Instalações Comerciais",ECD10704,"Móveis, Utensílios e Instalações Comerciais",FALSE,other,account.data_account_type_asset
 ECD107040600,1.07.04.06.00,Recursos Minerais,ECD10704,Recursos Minerais,FALSE,other,account.data_account_type_asset
 ECD107040700,1.07.04.07.00,Florestamento e Reflorestamento,ECD10704,Florestamento e Reflorestamento,FALSE,other,account.data_account_type_asset
@@ -120,48 +120,48 @@ ECD2,2,PASSIVO,ECD0,PASSIVO,FALSE,view,account.data_account_type_view
 ECD201,2.01,CIRCULANTE,ECD2,CIRCULANTE,FALSE,view,account.data_account_type_view
 ECD20101,2.01.01,OBRIGAÇÕES DE CURTO PRAZO,ECD201,OBRIGAÇÕES DE CURTO PRAZO,FALSE,view,account.data_account_type_view
 ECD201010100,2.01.01.01.00,Fornecedores Circulante,ECD20101,Fornecedores Circulante,TRUE,payable,account.data_account_type_payable
-ECD201010101,2.01.01.01.01,Adiantamentos de Clientes,ECD201010100,Adiantamentos de Clientes,TRUE,receivable,account.data_account_type_liability
-ECD201010201,2.01.01.02.01,Financiamentos a Curto Prazo - Sistema Financeiro Nacional,ECD201010100,Financiamentos a Curto Prazo - Sistema Financeiro Nacional,FALSE,other,account.data_account_type_liability
-ECD201010202,2.01.01.02.02,Arrendamento Mercantil (Financeiro) a Curto Prazo - Sistema Financeiro Nacional,ECD201010100,Arrendamento Mercantil (Financeiro) a Curto Prazo - Sistema Financeiro Nacional,FALSE,other,account.data_account_type_liability
-ECD201010203,2.01.01.02.03,Financiamentos a Curto Prazo - Outros,ECD201010100,Financiamentos a Curto Prazo - Outros,FALSE,other,account.data_account_type_liability
-ECD201010204,2.01.01.02.04,Financiamentos a Curto Prazo - Exterior,ECD201010100,Financiamentos a Curto Prazo - Exterior,FALSE,other,account.data_account_type_liability
-ECD201010205,2.01.01.02.05,Arrendamento Mercantil (Financeiro) a Curto Prazo - Exterior,ECD201010100,Arrendamento Mercantil (Financeiro) a Curto Prazo - Exterior,FALSE,other,account.data_account_type_liability
-ECD201010301,2.01.01.03.01,IPI a Recolher,ECD201010100,IPI a Recolher,FALSE,other,account.data_account_type_liability
-ECD201010302,2.01.01.03.02,ICMS e Contribuições a Recolher,ECD201010100,ICMS e Contribuições a Recolher,FALSE,other,account.data_account_type_liability
-ECD201010303,2.01.01.03.03,Tributos Municipais a Recolher,ECD201010100,Tributos Municipais a Recolher,FALSE,other,account.data_account_type_liability
+ECD201010101,2.01.01.01.01,Adiantamentos de Clientes,ECD20101,Adiantamentos de Clientes,TRUE,receivable,account.data_account_type_receivable
+ECD201010201,2.01.01.02.01,Financiamentos a Curto Prazo - Sistema Financeiro Nacional,ECD20101,Financiamentos a Curto Prazo - Sistema Financeiro Nacional,FALSE,other,account.data_account_type_liability
+ECD201010202,2.01.01.02.02,Arrendamento Mercantil (Financeiro) a Curto Prazo - Sistema Financeiro Nacional,ECD20101,Arrendamento Mercantil (Financeiro) a Curto Prazo - Sistema Financeiro Nacional,FALSE,other,account.data_account_type_liability
+ECD201010203,2.01.01.02.03,Financiamentos a Curto Prazo - Outros,ECD20101,Financiamentos a Curto Prazo - Outros,FALSE,other,account.data_account_type_liability
+ECD201010204,2.01.01.02.04,Financiamentos a Curto Prazo - Exterior,ECD20101,Financiamentos a Curto Prazo - Exterior,FALSE,other,account.data_account_type_liability
+ECD201010205,2.01.01.02.05,Arrendamento Mercantil (Financeiro) a Curto Prazo - Exterior,ECD20101,Arrendamento Mercantil (Financeiro) a Curto Prazo - Exterior,FALSE,other,account.data_account_type_liability
+ECD201010301,2.01.01.03.01,IPI a Recolher,ECD20101,IPI a Recolher,FALSE,other,account.data_account_type_liability
+ECD201010302,2.01.01.03.02,ICMS e Contribuições a Recolher,ECD20101,ICMS e Contribuições a Recolher,FALSE,other,account.data_account_type_liability
+ECD201010303,2.01.01.03.03,Tributos Municipais a Recolher,ECD20101,Tributos Municipais a Recolher,FALSE,other,account.data_account_type_liability
 ECD201010400,2.01.01.04.00,FGTS a Recolher,ECD20101,FGTS a Recolher,FALSE,other,account.data_account_type_liability
 ECD201010500,2.01.01.05.00,PIS e COFINS a Recolher,ECD20101,PIS e COFINS a Recolher,FALSE,other,account.data_account_type_liability
 ECD201010600,2.01.01.06.00,Contribuições Previdenciárias a Recolher,ECD20101,Contribuições Previdenciárias a Recolher,FALSE,other,account.data_account_type_liability
-ECD201010690,2.01.01.06.90,Outros tributos a recolher,ECD201010600,Outros tributos a recolher,FALSE,other,account.data_account_type_liability
+ECD201010690,2.01.01.06.90,Outros tributos a recolher,ECD20101,Outros tributos a recolher,FALSE,other,account.data_account_type_liability
 ECD201010700,2.01.01.07.00,Salários a Pagar,ECD20101,Salários a Pagar,FALSE,other,account.data_account_type_liability
 ECD201010800,2.01.01.08.00,Dividendos Propostos ou Lucros Creditados,ECD20101,Dividendos Propostos ou Lucros Creditados,FALSE,other,account.data_account_type_liability
 ECD201010900,2.01.01.09.00,Provisão para a Contribuição Social sobre o Lucro Líquido,ECD20101,Provisão para a Contribuição Social sobre o Lucro Líquido,FALSE,other,account.data_account_type_liability
 ECD201011000,2.01.01.10.00,Provisão para o Imposto de Renda,ECD20101,Provisão para o Imposto de Renda,FALSE,other,account.data_account_type_liability
 ECD201011100,2.01.01.11.00,Débitos Fiscais CSLL - Diferenças Temporárias,ECD20101,Débitos Fiscais CSLL - Diferenças Temporárias,FALSE,other,account.data_account_type_liability
 ECD201011200,2.01.01.12.00,Débitos Fiscais IRPJ - Diferenças Temporárias,ECD20101,Débitos Fiscais IRPJ - Diferenças Temporárias,FALSE,other,account.data_account_type_liability
-ECD201011210,2.01.01.12.10,Provisões de Natureza Fiscal,ECD201011200,Provisões de Natureza Fiscal,FALSE,other,account.data_account_type_liability
-ECD201011220,2.01.01.12.20,Provisões de Natureza Trabalhista,ECD201011200,Provisões de Natureza Trabalhista,FALSE,other,account.data_account_type_liability
-ECD201011230,2.01.01.12.30,Provisões de Natureza Cível,ECD201011200,Provisões de Natureza Cível,FALSE,other,account.data_account_type_liability
-ECD201011240,2.01.01.12.40,Doações e Subvenções para Investimentos,ECD201011200,Doações e Subvenções para Investimentos,FALSE,other,account.data_account_type_liability
+ECD201011210,2.01.01.12.10,Provisões de Natureza Fiscal,ECD20101,Provisões de Natureza Fiscal,FALSE,other,account.data_account_type_liability
+ECD201011220,2.01.01.12.20,Provisões de Natureza Trabalhista,ECD20101,Provisões de Natureza Trabalhista,FALSE,other,account.data_account_type_liability
+ECD201011230,2.01.01.12.30,Provisões de Natureza Cível,ECD20101,Provisões de Natureza Cível,FALSE,other,account.data_account_type_liability
+ECD201011240,2.01.01.12.40,Doações e Subvenções para Investimentos,ECD20101,Doações e Subvenções para Investimentos,FALSE,other,account.data_account_type_liability
 ECD201011300,2.01.01.13.00,Outras Contas do Circulante,ECD20101,Outras Contas do Circulante,FALSE,other,account.data_account_type_liability
 ECD201019000,2.01.01.90.00,(-) Contas Retificadoras,ECD20101,(-) Contas Retificadoras,FALSE,other,account.data_account_type_liability
 ECD203,2.03,NÃO-CIRCULANTE,ECD2,NÃO-CIRCULANTE,FALSE,view,account.data_account_type_view
 ECD20301,2.03.01,OBRIGAÇÕES A LONGO PRAZO,ECD203,OBRIGAÇÕES A LONGO PRAZO,FALSE,view,account.data_account_type_view
 ECD203010100,2.03.01.01.00,Fornecedores Não Circulante,ECD20301,Fornecedores Não Circulante,TRUE,payable,account.data_account_type_payable
 ECD203010200,2.03.01.02.00,Financiamentos a Longo Prazo - Sistema Financeiro Nacional,ECD20301,Financiamentos a Longo Prazo - Sistema Financeiro Nacional,FALSE,other,account.data_account_type_liability
-ECD203010202,2.03.01.02.02,Arrendamento Mercantil (Financeiro) a Longo Prazo - Sistema Financeiro Nacional,ECD203010200,Arrendamento Mercantil (Financeiro) a Longo Prazo - Sistema Financeiro Nacional,FALSE,other,account.data_account_type_liability
-ECD203010203,2.03.01.02.03,Financiamentos a Longo Prazo - Brasil - Outros,ECD203010200,Financiamentos a Longo Prazo - Brasil - Outros,FALSE,other,account.data_account_type_liability
-ECD203010204,2.03.01.02.04,Financiamentos a Longo Prazo - Exterior,ECD203010200,Financiamentos a Longo Prazo - Exterior,FALSE,other,account.data_account_type_liability
-ECD203010205,2.03.01.02.05,Arrendamento Mercantil (Financeiro) a Longo Prazo - Exterior,ECD203010200,Arrendamento Mercantil (Financeiro) a Longo Prazo - Exterior,FALSE,other,account.data_account_type_liability
+ECD203010202,2.03.01.02.02,Arrendamento Mercantil (Financeiro) a Longo Prazo - Sistema Financeiro Nacional,ECD20301,Arrendamento Mercantil (Financeiro) a Longo Prazo - Sistema Financeiro Nacional,FALSE,other,account.data_account_type_liability
+ECD203010203,2.03.01.02.03,Financiamentos a Longo Prazo - Brasil - Outros,ECD20301,Financiamentos a Longo Prazo - Brasil - Outros,FALSE,other,account.data_account_type_liability
+ECD203010204,2.03.01.02.04,Financiamentos a Longo Prazo - Exterior,ECD20301,Financiamentos a Longo Prazo - Exterior,FALSE,other,account.data_account_type_liability
+ECD203010205,2.03.01.02.05,Arrendamento Mercantil (Financeiro) a Longo Prazo - Exterior,ECD20301,Arrendamento Mercantil (Financeiro) a Longo Prazo - Exterior,FALSE,other,account.data_account_type_liability
 ECD203010300,2.03.01.03.00,Empréstimos de Sócios/Acionistas Não Administradores,ECD20301,Empréstimos de Sócios/Acionistas Não Administradores,FALSE,other,account.data_account_type_liability
 ECD203010400,2.03.01.04.00,Créditos de Pessoas Ligadas (Físicas/Jurídicas),ECD20301,Créditos de Pessoas Ligadas (Físicas/Jurídicas),FALSE,other,account.data_account_type_liability
 ECD203010500,2.03.01.05.00,Provisão para o Imposto de Renda sobre Lucros Diferidos,ECD20301,Provisão para o Imposto de Renda sobre Lucros Diferidos,FALSE,other,account.data_account_type_liability
 ECD203010600,2.03.01.06.00,Débitos Fiscais CSLL - Diferenças Temporárias,ECD20301,Débitos Fiscais CSLL - Diferenças Temporárias,FALSE,other,account.data_account_type_liability
 ECD203010700,2.03.01.07.00,Débitos Fiscais IRPJ - Diferenças Temporárias,ECD20301,Débitos Fiscais IRPJ - Diferenças Temporárias,FALSE,other,account.data_account_type_liability
-ECD203010710,2.03.01.07.10,Outras Provisões de Natureza Fiscal,ECD203010700,Outras Provisões de Natureza Fiscal,FALSE,other,account.data_account_type_liability
-ECD203010720,2.03.01.07.20,Outras Provisões de Natureza Trabalhista,ECD203010700,Outras Provisões de Natureza Trabalhista,FALSE,other,account.data_account_type_liability
-ECD203010730,2.03.01.07.30,Outras Provisões de Natureza Cível,ECD203010700,Outras Provisões de Natureza Cível,FALSE,other,account.data_account_type_liability
-ECD203010740,2.03.01.07.40,Doações e Subvenções para Investimentos,ECD203010700,Doações e Subvenções para Investimentos,FALSE,other,account.data_account_type_liability
+ECD203010710,2.03.01.07.10,Outras Provisões de Natureza Fiscal,ECD20301,Outras Provisões de Natureza Fiscal,FALSE,other,account.data_account_type_liability
+ECD203010720,2.03.01.07.20,Outras Provisões de Natureza Trabalhista,ECD20301,Outras Provisões de Natureza Trabalhista,FALSE,other,account.data_account_type_liability
+ECD203010730,2.03.01.07.30,Outras Provisões de Natureza Cível,ECD20301,Outras Provisões de Natureza Cível,FALSE,other,account.data_account_type_liability
+ECD203010740,2.03.01.07.40,Doações e Subvenções para Investimentos,ECD20301,Doações e Subvenções para Investimentos,FALSE,other,account.data_account_type_liability
 ECD203010800,2.03.01.08.00,Outras Contas,ECD20301,Outras Contas,FALSE,other,account.data_account_type_liability
 ECD203019000,2.03.01.90.00,(-) Contas Retificadoras,ECD20301,(-) Contas Retificadoras,FALSE,other,account.data_account_type_liability
 ECD20303,2.03.03,RECEITAS DIFERIDAS,ECD203,RECEITAS DIFERIDAS,FALSE,view,account.data_account_type_view
@@ -177,13 +177,13 @@ ECD20704,2.07.04,RESERVAS,ECD207,RESERVAS,FALSE,view,account.data_account_type_v
 ECD207040100,2.07.04.01.00,Reservas de Capital,ECD20704,Reservas de Capital,FALSE,other,account.data_account_type_liability
 ECD207040200,2.07.04.02.00,Reservas de Reavaliação,ECD20704,Reservas de Reavaliação,FALSE,other,account.data_account_type_liability
 ECD207040300,2.07.04.03.00,Reservas de Lucros,ECD20704,Reservas de Lucros,FALSE,other,account.data_account_type_liability
-ECD207040301,2.07.04.03.01,Reservas de Lucros - Doações e Subvenções para Investimentos,ECD207040300,Reservas de Lucros - Doações e Subvenções para Investimentos,FALSE,other,account.data_account_type_liability
-ECD207040302,2.07.04.03.02,Reservas de Lucros - Prêmio na Emissão de Debêntures,ECD207040300,Reservas de Lucros - Prêmio na Emissão de Debêntures,FALSE,other,account.data_account_type_liability
+ECD207040301,2.07.04.03.01,Reservas de Lucros - Doações e Subvenções para Investimentos,ECD20704,Reservas de Lucros - Doações e Subvenções para Investimentos,FALSE,other,account.data_account_type_liability
+ECD207040302,2.07.04.03.02,Reservas de Lucros - Prêmio na Emissão de Debêntures,ECD20704,Reservas de Lucros - Prêmio na Emissão de Debêntures,FALSE,other,account.data_account_type_liability
 ECD207040400,2.07.04.04.00,"Reserva para Aumento de Capital (Lei no 9.249/1995, art. 9o, § 9o)",ECD20704,"Reserva para Aumento de Capital (Lei no 9.249/1995, art. 9o, § 9o)",FALSE,other,account.data_account_type_liability
 ECD207040500,2.07.04.05.00,Outras Reservas,ECD20704,Outras Reservas,FALSE,other,account.data_account_type_liability
 ECD20705,2.07.05,AJUSTES DE AVALIAÇÃO PATRIMONIAL,ECD207,AJUSTES DE AVALIAÇÃO PATRIMONIAL,FALSE,view,account.data_account_type_view
 ECD207050100,2.07.05.01.00,Ajustes às Normas Internacionais de Contabilidade,ECD20705,Ajustes às Normas Internacionais de Contabilidade,FALSE,other,account.data_account_type_liability
-ECD207050101,2.07.05.01.01,(-) Ajustes às Normas Internacionais de Contabilidade,ECD207050100,(-) Ajustes às Normas Internacionais de Contabilidade,FALSE,other,account.data_account_type_liability
+ECD207050101,2.07.05.01.01,(-) Ajustes às Normas Internacionais de Contabilidade,ECD20705,(-) Ajustes às Normas Internacionais de Contabilidade,FALSE,other,account.data_account_type_liability
 ECD20707,2.07.07,OUTRAS CONTAS,ECD207,OUTRAS CONTAS,FALSE,view,account.data_account_type_view
 ECD207070100,2.07.07.01.00,Lucros Acumulados e/ou Saldo à Disposição da Assembléia,ECD20707,Lucros Acumulados e/ou Saldo à Disposição da Assembléia,FALSE,other,account.data_account_type_liability
 ECD207070200,2.07.07.02.00,(-) Prejuízos Acumulados,ECD20707,(-) Prejuízos Acumulados,FALSE,other,account.data_account_type_liability
@@ -221,10 +221,10 @@ ECD3010101030500,3.01.01.01.03.05.00,(-) ISS,ECD301010103,(-) ISS,FALSE,other,ac
 ECD3010101030600,3.01.01.01.03.06.00,(-) Demais Impostos e Contribuições Incidentes sobre Vendas e Serviços,ECD301010103,(-) Demais Impostos e Contribuições Incidentes sobre Vendas e Serviços,FALSE,other,account.data_account_type_expense
 ECD3010103,3.01.01.03,CUSTO DOS BENS E SERVIÇOS VENDIDOS,ECD30101,CUSTO DOS BENS E SERVIÇOS VENDIDOS,FALSE,view,account.data_account_type_view
 ECD301010301,3.01.01.03.01,CUSTO DOS PRODUTOS DE FABRICAÇÃO PRÓPRIA VENDIDOS,ECD3010103,CUSTO DOS PRODUTOS DE FABRICAÇÃO PRÓPRIA VENDIDOS,FALSE,view,account.data_account_type_view
-ECD3010103010000,3.01.01.03.01.00.00,Custo dos Produtos de Fabricação Própria Vendidos,ECD3010103,Custo dos Produtos de Fabricação Própria Vendidos,FALSE,other,account.data_account_type_expense
+ECD3010103010000,3.01.01.03.01.00.00,Custo dos Produtos de Fabricação Própria Vendidos,ECD301010301,Custo dos Produtos de Fabricação Própria Vendidos,FALSE,other,account.data_account_type_expense
 ECD301010303,3.01.01.03.03,CUSTO DAS MERCADORIAS REVENDIDAS,ECD3010103,CUSTO DAS MERCADORIAS REVENDIDAS,FALSE,view,account.data_account_type_view
-ECD3010103030000,3.01.01.03.03.00.00,Custo das Mercadorias Revendidas,ECD3010103,Custo das Mercadorias Revendidas,FALSE,other,account.data_account_type_expense
-ECD3010103050000,3.01.01.03.05.00.00,Custo dos Serviços Vendidos,ECD3010103,Custo dos Serviços Vendidos,FALSE,other,account.data_account_type_expense
+ECD3010103030000,3.01.01.03.03.00.00,Custo das Mercadorias Revendidas,ECD301010303,Custo das Mercadorias Revendidas,FALSE,other,account.data_account_type_expense
+ECD3010103050000,3.01.01.03.05.00.00,Custo dos Serviços Vendidos,ECD301010303,Custo dos Serviços Vendidos,FALSE,other,account.data_account_type_expense
 ECD301010307,3.01.01.03.07,CUSTO DAS UNIDADES IMOBILIÁRIAS VENDIDAS,ECD3010103,CUSTO DAS UNIDADES IMOBILIÁRIAS VENDIDAS,FALSE,view,account.data_account_type_view
 ECD3010103070100,3.01.01.03.07.01.00,Custo das Unidades Imobiliárias Vendidas,ECD301010307,Custo das Unidades Imobiliárias Vendidas,FALSE,other,account.data_account_type_expense
 ECD301010309,3.01.01.03.09,AJUSTES DE ESTOQUES DECORRENTES DE ARBITRAMENTO,ECD3010103,AJUSTES DE ESTOQUES DECORRENTES DE ARBITRAMENTO,FALSE,view,account.data_account_type_view
@@ -344,7 +344,7 @@ ECD3050101030500,3.05.01.01.03.05.00,(-) ISS,ECD305010103,(-) ISS,FALSE,other,ac
 ECD3050101030600,3.05.01.01.03.06.00,(-) Demais Impostos e Contribuições Incidentes sobre Vendas e Serviços,ECD305010103,(-) Demais Impostos e Contribuições Incidentes sobre Vendas e Serviços,FALSE,other,account.data_account_type_expense
 ECD3050103,3.05.01.03,CUSTO DOS BENS E SERVIÇOS VENDIDOS,ECD30501,CUSTO DOS BENS E SERVIÇOS VENDIDOS,FALSE,view,account.data_account_type_view
 ECD305010301,3.05.01.03.01,CUSTO DOS PRODUTOS DA ATIVIDADE RURAL VENDIDOS,ECD3050103,CUSTO DOS PRODUTOS DA ATIVIDADE RURAL VENDIDOS,FALSE,view,account.data_account_type_view
-ECD3050103010000,3.05.01.03.01.00.00,Custo dos Produtos Vendidos da Atividade Rural,ECD3050103,Custo dos Produtos Vendidos da Atividade Rural,FALSE,other,account.data_account_type_expense
+ECD3050103010000,3.05.01.03.01.00.00,Custo dos Produtos Vendidos da Atividade Rural,ECD305010301,Custo dos Produtos Vendidos da Atividade Rural,FALSE,other,account.data_account_type_expense
 ECD305010309,3.05.01.03.09,AJUSTES DE ESTOQUES DECORRENTES DE ARBITRAMENTO,ECD3050103,AJUSTES DE ESTOQUES DECORRENTES DE ARBITRAMENTO,FALSE,view,account.data_account_type_view
 ECD3050105,3.05.01.05,OUTRAS RECEITAS OPERACIONAIS,ECD30501,OUTRAS RECEITAS OPERACIONAIS,FALSE,view,account.data_account_type_view
 ECD305010501,3.05.01.05.01,OUTRAS RECEITAS OPERACIONAIS,ECD3050105,OUTRAS RECEITAS OPERACIONAIS,FALSE,view,account.data_account_type_view
@@ -539,33 +539,33 @@ ECD4010501011000,4.01.05.01.01.10.00,Outras,ECD401050101,Outras,FALSE,other,acco
 ECD40107,4.01.07,DESPESAS OPERACIONAIS,ECD401,DESPESAS OPERACIONAIS,FALSE,view,account.data_account_type_view
 ECD4010701,4.01.07.01,DESPESAS OPERACIONAIS,ECD40107,DESPESAS OPERACIONAIS,FALSE,view,account.data_account_type_view
 ECD401070101,4.01.07.01.01,DESPESAS OPERACIONAIS,ECD4010701,DESPESAS OPERACIONAIS,FALSE,view,account.data_account_type_view
-ECD40107010100,4.01.07.01.01.00,Remunerações a Empregados,ECD4010701,Remunerações a Empregados,FALSE,other,account.data_account_type_expense
-ECD40107010200,4.01.07.01.02.00,Indenizações Trabalhistas,ECD4010701,Indenizações Trabalhistas,FALSE,other,account.data_account_type_expense
-ECD40107010300,4.01.07.01.03.00,Remuneração a Dirigentes e a Conselho de Administração/Fiscal,ECD4010701,Remuneração a Dirigentes e a Conselho de Administração/Fiscal,FALSE,other,account.data_account_type_expense
-ECD40107010400,4.01.07.01.04.00,Prestação de Serviços por Pessoa Física sem Vínculo Empregatício,ECD4010701,Prestação de Serviços por Pessoa Física sem Vínculo Empregatício,FALSE,other,account.data_account_type_expense
-ECD40107010500,4.01.07.01.05.00,Prestação de Serviço por Pessoa Jurídica,ECD4010701,Prestação de Serviço por Pessoa Jurídica,FALSE,other,account.data_account_type_expense
-ECD40107010600,4.01.07.01.06.00,Doações e Patrocínios de Caráter Cultural e Artístico (Lei no 8.313/1991),ECD4010701,Doações e Patrocínios de Caráter Cultural e Artístico (Lei no 8.313/1991),FALSE,other,account.data_account_type_expense
-ECD40107010700,4.01.07.01.07.00,"Doações a Instituições de Ensino e Pesquisa (Lei no 9.249/1995, art.13, § 2o)",ECD4010701,"Doações a Instituições de Ensino e Pesquisa (Lei no 9.249/1995, art.13, § 2o)",FALSE,other,account.data_account_type_expense
-ECD40107010800,4.01.07.01.08.00,Doações a Entidades Civis,ECD4010701,Doações a Entidades Civis,FALSE,other,account.data_account_type_expense
-ECD40107010900,4.01.07.01.09.00,Outras Contribuições e Doações,ECD4010701,Outras Contribuições e Doações,FALSE,other,account.data_account_type_expense
-ECD40107011000,4.01.07.01.10.00,FGTS (sem indenização 40%),ECD4010701,FGTS (sem indenização 40%),FALSE,other,account.data_account_type_expense
-ECD40107011100,4.01.07.01.11.00,"Assistência Médica, Odontológica, Medicamentos, Aparelhos Ortopédicos e Similares",ECD4010701,"Assistência Médica, Odontológica, Medicamentos, Aparelhos Ortopédicos e Similares",FALSE,other,account.data_account_type_expense
-ECD40107011200,4.01.07.01.12.00,Provisões para Férias e 13o Salário de Empregados,ECD4010701,Provisões para Férias e 13o Salário de Empregados,FALSE,other,account.data_account_type_expense
-ECD40107011300,4.01.07.01.13.00,Demais Provisões,ECD4010701,Demais Provisões,FALSE,other,account.data_account_type_expense
-ECD40107011400,4.01.07.01.14.00,Arrendamento Mercantil,ECD4010701,Arrendamento Mercantil,FALSE,other,account.data_account_type_expense
-ECD40107011500,4.01.07.01.15.00,Aluguéis,ECD4010701,Aluguéis,FALSE,other,account.data_account_type_expense
-ECD40107011600,4.01.07.01.16.00,Despesas com Veículos e de Conservação de Bens e Instalações,ECD4010701,Despesas com Veículos e de Conservação de Bens e Instalações,FALSE,other,account.data_account_type_expense
-ECD40107011700,4.01.07.01.17.00,Propaganda e Publicidade,ECD4010701,Propaganda e Publicidade,FALSE,other,account.data_account_type_expense
-ECD40107011800,4.01.07.01.18.00,Multas,ECD4010701,Multas,FALSE,other,account.data_account_type_expense
-ECD40107011900,4.01.07.01.19.00,Encargos de Depreciação e Amortização,ECD4010701,Encargos de Depreciação e Amortização,FALSE,other,account.data_account_type_expense
-ECD40107012000,4.01.07.01.20.00,Repasses para Outras Entidades (Sindicatos/Federações/Confederações),ECD4010701,Repasses para Outras Entidades (Sindicatos/Federações/Confederações),FALSE,other,account.data_account_type_expense
-ECD40107012100,4.01.07.01.21.00,Contribuições Previdenciárias Patronais,ECD4010701,Contribuições Previdenciárias Patronais,FALSE,other,account.data_account_type_expense
-ECD40107012200,4.01.07.01.22.00,COFINS,ECD4010701,COFINS,FALSE,other,account.data_account_type_expense
-ECD40107012300,4.01.07.01.23.00,CSLL,ECD4010701,CSLL,FALSE,other,account.data_account_type_expense
-ECD40107012400,4.01.07.01.24.00,PIS/PASEP,ECD4010701,PIS/PASEP,FALSE,other,account.data_account_type_expense
-ECD40107012500,4.01.07.01.25.00,CPMF,ECD4010701,CPMF,FALSE,other,account.data_account_type_expense
-ECD40107012600,4.01.07.01.26.00,"Demais Impostos, Taxas e Contribuições, exceto as citadas acima.",ECD4010701,"Demais Impostos, Taxas e Contribuições, exceto as citadas acima.",FALSE,other,account.data_account_type_expense
-ECD40107012700,4.01.07.01.27.00,Outras Despesas Operacionais,ECD4010701,Outras Despesas Operacionais,FALSE,other,account.data_account_type_expense
+ECD40107010100,4.01.07.01.01.00,Remunerações a Empregados,ECD401070101,Remunerações a Empregados,FALSE,other,account.data_account_type_expense
+ECD40107010200,4.01.07.01.02.00,Indenizações Trabalhistas,ECD401070101,Indenizações Trabalhistas,FALSE,other,account.data_account_type_expense
+ECD40107010300,4.01.07.01.03.00,Remuneração a Dirigentes e a Conselho de Administração/Fiscal,ECD401070101,Remuneração a Dirigentes e a Conselho de Administração/Fiscal,FALSE,other,account.data_account_type_expense
+ECD40107010400,4.01.07.01.04.00,Prestação de Serviços por Pessoa Física sem Vínculo Empregatício,ECD401070101,Prestação de Serviços por Pessoa Física sem Vínculo Empregatício,FALSE,other,account.data_account_type_expense
+ECD40107010500,4.01.07.01.05.00,Prestação de Serviço por Pessoa Jurídica,ECD401070101,Prestação de Serviço por Pessoa Jurídica,FALSE,other,account.data_account_type_expense
+ECD40107010600,4.01.07.01.06.00,Doações e Patrocínios de Caráter Cultural e Artístico (Lei no 8.313/1991),ECD401070101,Doações e Patrocínios de Caráter Cultural e Artístico (Lei no 8.313/1991),FALSE,other,account.data_account_type_expense
+ECD40107010700,4.01.07.01.07.00,"Doações a Instituições de Ensino e Pesquisa (Lei no 9.249/1995, art.13, § 2o)",ECD401070101,"Doações a Instituições de Ensino e Pesquisa (Lei no 9.249/1995, art.13, § 2o)",FALSE,other,account.data_account_type_expense
+ECD40107010800,4.01.07.01.08.00,Doações a Entidades Civis,ECD401070101,Doações a Entidades Civis,FALSE,other,account.data_account_type_expense
+ECD40107010900,4.01.07.01.09.00,Outras Contribuições e Doações,ECD401070101,Outras Contribuições e Doações,FALSE,other,account.data_account_type_expense
+ECD40107011000,4.01.07.01.10.00,FGTS (sem indenização 40%),ECD401070101,FGTS (sem indenização 40%),FALSE,other,account.data_account_type_expense
+ECD40107011100,4.01.07.01.11.00,"Assistência Médica, Odontológica, Medicamentos, Aparelhos Ortopédicos e Similares",ECD401070101,"Assistência Médica, Odontológica, Medicamentos, Aparelhos Ortopédicos e Similares",FALSE,other,account.data_account_type_expense
+ECD40107011200,4.01.07.01.12.00,Provisões para Férias e 13o Salário de Empregados,ECD401070101,Provisões para Férias e 13o Salário de Empregados,FALSE,other,account.data_account_type_expense
+ECD40107011300,4.01.07.01.13.00,Demais Provisões,ECD401070101,Demais Provisões,FALSE,other,account.data_account_type_expense
+ECD40107011400,4.01.07.01.14.00,Arrendamento Mercantil,ECD401070101,Arrendamento Mercantil,FALSE,other,account.data_account_type_expense
+ECD40107011500,4.01.07.01.15.00,Aluguéis,ECD401070101,Aluguéis,FALSE,other,account.data_account_type_expense
+ECD40107011600,4.01.07.01.16.00,Despesas com Veículos e de Conservação de Bens e Instalações,ECD401070101,Despesas com Veículos e de Conservação de Bens e Instalações,FALSE,other,account.data_account_type_expense
+ECD40107011700,4.01.07.01.17.00,Propaganda e Publicidade,ECD401070101,Propaganda e Publicidade,FALSE,other,account.data_account_type_expense
+ECD40107011800,4.01.07.01.18.00,Multas,ECD401070101,Multas,FALSE,other,account.data_account_type_expense
+ECD40107011900,4.01.07.01.19.00,Encargos de Depreciação e Amortização,ECD401070101,Encargos de Depreciação e Amortização,FALSE,other,account.data_account_type_expense
+ECD40107012000,4.01.07.01.20.00,Repasses para Outras Entidades (Sindicatos/Federações/Confederações),ECD401070101,Repasses para Outras Entidades (Sindicatos/Federações/Confederações),FALSE,other,account.data_account_type_expense
+ECD40107012100,4.01.07.01.21.00,Contribuições Previdenciárias Patronais,ECD401070101,Contribuições Previdenciárias Patronais,FALSE,other,account.data_account_type_expense
+ECD40107012200,4.01.07.01.22.00,COFINS,ECD401070101,COFINS,FALSE,other,account.data_account_type_expense
+ECD40107012300,4.01.07.01.23.00,CSLL,ECD401070101,CSLL,FALSE,other,account.data_account_type_expense
+ECD40107012400,4.01.07.01.24.00,PIS/PASEP,ECD401070101,PIS/PASEP,FALSE,other,account.data_account_type_expense
+ECD40107012500,4.01.07.01.25.00,CPMF,ECD401070101,CPMF,FALSE,other,account.data_account_type_expense
+ECD40107012600,4.01.07.01.26.00,"Demais Impostos, Taxas e Contribuições, exceto as citadas acima.",ECD401070101,"Demais Impostos, Taxas e Contribuições, exceto as citadas acima.",FALSE,other,account.data_account_type_expense
+ECD40107012700,4.01.07.01.27.00,Outras Despesas Operacionais,ECD401070101,Outras Despesas Operacionais,FALSE,other,account.data_account_type_expense
 ECD40109,4.01.09,OUTRAS DESPESAS OPERACIONAIS,ECD401,OUTRAS DESPESAS OPERACIONAIS,FALSE,view,account.data_account_type_view
 ECD4010901,4.01.09.01,OUTRAS DESPESAS OPERACIONAIS,ECD40109,OUTRAS DESPESAS OPERACIONAIS,FALSE,view,account.data_account_type_view
 ECD401090101,4.01.09.01.01,OUTRAS DESPESAS OPERACIONAIS,ECD4010901,OUTRAS DESPESAS OPERACIONAIS,FALSE,view,account.data_account_type_view
@@ -583,19 +583,19 @@ ECD4030101,4.03.01.01,RECEITAS E DESPESAS NÃO OPERACIONAIS,ECD40301,RECEITAS E 
 ECD403010101,4.03.01.01.01,RECEITAS NÃO OPERACIONAIS,ECD4030101,RECEITAS NÃO OPERACIONAIS,FALSE,view,account.data_account_type_view
 ECD4030101010100,4.03.01.01.01.01.00,Receitas de Alienações de Bens e Direitos do Ativo Permanente.,ECD403010101,Receitas de Alienações de Bens e Direitos do Ativo Permanente.,FALSE,other,account.data_account_type_income
 ECD4030101010200,4.03.01.01.01.02.00,Outras Receitas Não Operacionais,ECD403010101,Outras Receitas Não Operacionais,FALSE,other,account.data_account_type_income
-ECD403020101,4.03.02.01.01,DESPESAS NÃO OPERACIONAIS,ECD403010101,DESPESAS NÃO OPERACIONAIS,FALSE,view,account.data_account_type_view
-ECD4030201010100,4.03.02.01.01.01.00,(-) Valor Contábil dos Bens e Direitos Alienados,ECD403010101,(-) Valor Contábil dos Bens e Direitos Alienados,FALSE,other,account.data_account_type_expense
-ECD4030201010200,4.03.02.01.01.02.00,(-) Outras Despesas Não Operacionais,ECD403010101,(-) Outras Despesas Não Operacionais,FALSE,other,account.data_account_type_expense
+ECD403020101,4.03.02.01.01,DESPESAS NÃO OPERACIONAIS,ECD403,DESPESAS NÃO OPERACIONAIS,FALSE,view,account.data_account_type_view
+ECD4030201010100,4.03.02.01.01.01.00,(-) Valor Contábil dos Bens e Direitos Alienados,ECD403020101,(-) Valor Contábil dos Bens e Direitos Alienados,FALSE,other,account.data_account_type_expense
+ECD4030201010200,4.03.02.01.01.02.00,(-) Outras Despesas Não Operacionais,ECD403020101,(-) Outras Despesas Não Operacionais,FALSE,other,account.data_account_type_expense
 ECD5,5,CUSTOS DE PRODUÇÃO,ECD0,CUSTOS DE PRODUÇÃO,FALSE,view,account.data_account_type_view
 ECD501,5.01,CUSTO DOS BENS E SERVIÇOS PRODUZIDOS,ECD5,CUSTO DOS BENS E SERVIÇOS PRODUZIDOS,FALSE,view,account.data_account_type_view
 ECD50101,5.01.01,CUSTO DOS PRODUTOS DE FABRICAÇÃO PRÓPRIA PRODUZIDOS,ECD501,CUSTO DOS PRODUTOS DE FABRICAÇÃO PRÓPRIA PRODUZIDOS,FALSE,view,account.data_account_type_view
 ECD501010100,5.01.01.01.00,Consumo de Insumos,ECD50101,Consumo de Insumos,FALSE,other,account.data_account_type_expense
 ECD501010400,5.01.01.04.00,Remuneração a Dirigentes de Ligados à Produção,ECD50101,Remuneração a Dirigentes de Ligados à Produção,FALSE,other,account.data_account_type_expense
 ECD501010500,5.01.01.05.00,Custo do Pessoal Aplicado na Produção,ECD50101,Custo do Pessoal Aplicado na Produção,FALSE,other,account.data_account_type_expense
-ECD501010503,5.01.01.05.03,Planos de Poupança e Investimentos de Empregados Ligados à Produção,ECD501010500,Planos de Poupança e Investimentos de Empregados Ligados à Produção,FALSE,other,account.data_account_type_expense
-ECD501010505,5.01.01.05.05,Fundo de Aposentadoria Programada Individual de Empregados Ligados à Produção,ECD501010500,Fundo de Aposentadoria Programada Individual de Empregados Ligados à Produção,FALSE,other,account.data_account_type_expense
-ECD501010507,5.01.01.05.07,Plano de Previdência Privada de Empregados Ligados à Produção,ECD501010500,Plano de Previdência Privada de Empregados Ligados à Produção,FALSE,other,account.data_account_type_expense
-ECD501010509,5.01.01.05.09,Outros Gastos com Pessoal Ligado à Produção,ECD501010500,Outros Gastos com Pessoal Ligado à Produção,FALSE,other,account.data_account_type_expense
+ECD501010503,5.01.01.05.03,Planos de Poupança e Investimentos de Empregados Ligados à Produção,ECD50101,Planos de Poupança e Investimentos de Empregados Ligados à Produção,FALSE,other,account.data_account_type_expense
+ECD501010505,5.01.01.05.05,Fundo de Aposentadoria Programada Individual de Empregados Ligados à Produção,ECD50101,Fundo de Aposentadoria Programada Individual de Empregados Ligados à Produção,FALSE,other,account.data_account_type_expense
+ECD501010507,5.01.01.05.07,Plano de Previdência Privada de Empregados Ligados à Produção,ECD50101,Plano de Previdência Privada de Empregados Ligados à Produção,FALSE,other,account.data_account_type_expense
+ECD501010509,5.01.01.05.09,Outros Gastos com Pessoal Ligado à Produção,ECD50101,Outros Gastos com Pessoal Ligado à Produção,FALSE,other,account.data_account_type_expense
 ECD501010600,5.01.01.06.00,Prestação de Serviços por Pessoa Física sem Vínculo Empregatício,ECD50101,Prestação de Serviços por Pessoa Física sem Vínculo Empregatício,FALSE,other,account.data_account_type_expense
 ECD501010700,5.01.01.07.00,Prestação de Serviço Pessoa Jurídica,ECD50101,Prestação de Serviço Pessoa Jurídica,FALSE,other,account.data_account_type_expense
 ECD501010800,5.01.01.08.00,Serviços Prestados por Cooperativa de Trabalho,ECD50101,Serviços Prestados por Cooperativa de Trabalho,FALSE,other,account.data_account_type_expense
@@ -617,10 +617,10 @@ ECD50103,5.01.03,CUSTO DOS SERVIÇOS PRODUZIDOS,ECD501,CUSTO DOS SERVIÇOS PRODU
 ECD501030200,5.01.03.02.00,Material Aplicado na Produção de Serviços,ECD50103,Material Aplicado na Produção de Serviços,FALSE,other,account.data_account_type_expense
 ECD501030400,5.01.03.04.00,Remuneração a Dirigentes ligados à Produção de Serviços,ECD50103,Remuneração a Dirigentes ligados à Produção de Serviços,FALSE,other,account.data_account_type_expense
 ECD501030500,5.01.03.05.00,Custo do Pessoal Aplicado na Produção de Serviços,ECD50103,Custo do Pessoal Aplicado na Produção de Serviços,FALSE,other,account.data_account_type_expense
-ECD501030503,5.01.03.05.03,Planos de Poupança e Investimentos de Empregados Ligados à Produção de Serviços,ECD501030500,Planos de Poupança e Investimentos de Empregados Ligados à Produção de Serviços,FALSE,other,account.data_account_type_expense
-ECD501030505,5.01.03.05.05,Fundo de Aposentadoria Programada Individual de Empregados Ligados à Produção de Serviços,ECD501030500,Fundo de Aposentadoria Programada Individual de Empregados Ligados à Produção de Serviços,FALSE,other,account.data_account_type_expense
-ECD501030507,5.01.03.05.07,Plano de Previdência Privada de Empregados Ligados à Produção de Serviços,ECD501030500,Plano de Previdência Privada de Empregados Ligados à Produção de Serviços,FALSE,other,account.data_account_type_expense
-ECD501030509,5.01.03.05.09,Outros Gastos com Pessoal Ligado à Produção de Serviços,ECD501030500,Outros Gastos com Pessoal Ligado à Produção de Serviços,FALSE,other,account.data_account_type_expense
+ECD501030503,5.01.03.05.03,Planos de Poupança e Investimentos de Empregados Ligados à Produção de Serviços,ECD50103,Planos de Poupança e Investimentos de Empregados Ligados à Produção de Serviços,FALSE,other,account.data_account_type_expense
+ECD501030505,5.01.03.05.05,Fundo de Aposentadoria Programada Individual de Empregados Ligados à Produção de Serviços,ECD50103,Fundo de Aposentadoria Programada Individual de Empregados Ligados à Produção de Serviços,FALSE,other,account.data_account_type_expense
+ECD501030507,5.01.03.05.07,Plano de Previdência Privada de Empregados Ligados à Produção de Serviços,ECD50103,Plano de Previdência Privada de Empregados Ligados à Produção de Serviços,FALSE,other,account.data_account_type_expense
+ECD501030509,5.01.03.05.09,Outros Gastos com Pessoal Ligado à Produção de Serviços,ECD50103,Outros Gastos com Pessoal Ligado à Produção de Serviços,FALSE,other,account.data_account_type_expense
 ECD501030600,5.01.03.06.00,Prestação de Serviços por Pessoa Física sem Vínculo Empregatício,ECD50103,Prestação de Serviços por Pessoa Física sem Vínculo Empregatício,FALSE,other,account.data_account_type_expense
 ECD501030700,5.01.03.07.00,Prestação de Serviço Pessoa Jurídica,ECD50103,Prestação de Serviço Pessoa Jurídica,FALSE,other,account.data_account_type_expense
 ECD501030800,5.01.03.08.00,Serviços Prestados por Cooperativa de Trabalho,ECD50103,Serviços Prestados por Cooperativa de Trabalho,FALSE,other,account.data_account_type_expense
@@ -644,10 +644,10 @@ ECD50105,5.01.05,CUSTO DOS PRODUTOS DE FABRICAÇÃO PRÓPRIA PRODUZIDOS DA ATIVI
 ECD501050100,5.01.05.01.00,Consumo de Insumos,ECD50105,Consumo de Insumos,FALSE,other,account.data_account_type_expense
 ECD501050400,5.01.05.04.00,Remuneração a Dirigentes de Ligados à Produção,ECD50105,Remuneração a Dirigentes de Ligados à Produção,FALSE,other,account.data_account_type_expense
 ECD501050500,5.01.05.05.00,Custo do Pessoal Aplicado na Produção,ECD50105,Custo do Pessoal Aplicado na Produção,FALSE,other,account.data_account_type_expense
-ECD501050503,5.01.05.05.03,Planos de Poupança e Investimentos de Empregados Ligados à Produção,ECD501050500,Planos de Poupança e Investimentos de Empregados Ligados à Produção,FALSE,other,account.data_account_type_expense
-ECD501050505,5.01.05.05.05,Fundo de Aposentadoria Programada Individual de Empregados Ligados à Produção,ECD501050500,Fundo de Aposentadoria Programada Individual de Empregados Ligados à Produção,FALSE,other,account.data_account_type_expense
-ECD501050507,5.01.05.05.07,Plano de Previdência Privada de Empregados Ligados à Produção,ECD501050500,Plano de Previdência Privada de Empregados Ligados à Produção,FALSE,other,account.data_account_type_expense
-ECD501050509,5.01.05.05.09,Outros Gastos com Pessoal Ligado à Produção,ECD501050500,Outros Gastos com Pessoal Ligado à Produção,FALSE,other,account.data_account_type_expense
+ECD501050503,5.01.05.05.03,Planos de Poupança e Investimentos de Empregados Ligados à Produção,ECD50105,Planos de Poupança e Investimentos de Empregados Ligados à Produção,FALSE,other,account.data_account_type_expense
+ECD501050505,5.01.05.05.05,Fundo de Aposentadoria Programada Individual de Empregados Ligados à Produção,ECD50105,Fundo de Aposentadoria Programada Individual de Empregados Ligados à Produção,FALSE,other,account.data_account_type_expense
+ECD501050507,5.01.05.05.07,Plano de Previdência Privada de Empregados Ligados à Produção,ECD50105,Plano de Previdência Privada de Empregados Ligados à Produção,FALSE,other,account.data_account_type_expense
+ECD501050509,5.01.05.05.09,Outros Gastos com Pessoal Ligado à Produção,ECD50105,Outros Gastos com Pessoal Ligado à Produção,FALSE,other,account.data_account_type_expense
 ECD501050600,5.01.05.06.00,Prestação de Serviços por Pessoa Física sem Vínculo Empregatício,ECD50105,Prestação de Serviços por Pessoa Física sem Vínculo Empregatício,FALSE,other,account.data_account_type_expense
 ECD501050700,5.01.05.07.00,Prestação de Serviço Pessoa Jurídica,ECD50105,Prestação de Serviço Pessoa Jurídica,FALSE,other,account.data_account_type_expense
 ECD501050800,5.01.05.08.00,Serviços Prestados por Cooperativa de Trabalho,ECD50105,Serviços Prestados por Cooperativa de Trabalho,FALSE,other,account.data_account_type_expense
